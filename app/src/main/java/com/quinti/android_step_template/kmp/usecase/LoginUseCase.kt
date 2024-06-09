@@ -1,7 +1,7 @@
 package com.quinti.android_step_template.kmp.usecase
 
-import com.quinti.android_step_template.kmp.api.entity.Login
-import com.quinti.android_step_template.kmp.repository.LoginRepository
+import com.quinti.android_step_template.kmp.data.api.entity.Login
+import com.quinti.android_step_template.kmp.data.repository.LoginRepository
 
 
 interface LoginUseCase {
