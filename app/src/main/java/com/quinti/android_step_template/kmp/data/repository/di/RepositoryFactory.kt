@@ -1,10 +1,10 @@
 package com.quinti.android_step_template.kmp.data.repository.di
 
-import com.quinti.android_step_template.kmp.data.repository.LoginRepository
+import com.quinti.android_step_template.kmp.data.repository.AccountRepository
 
 
 interface RepositoryFactory {
-    fun createLoginRepository(): LoginRepository
+    fun createAccountRepository(): AccountRepository
 //    fun createBalanceRepository(): BalanceRepository
 //    fun createBankRegistrationRepository(): BankRegistrationRepository
 //    fun createBnplRepository(): BnplRepository

@@ -5,12 +5,12 @@ import com.quinti.android_step_template.kmp.data.api.entity.Login
 import com.quinti.android_step_template.kmp.data.datasource.AccountLocalDataSource
 import kotlinx.coroutines.flow.SharedFlow
 
-class LoginRepositoryImpl(
+class AccountRepositoryImpl(
     private val loginApi: LoginApi,
     private val localDataSource: AccountLocalDataSource,
-) : LoginRepository {
+) : AccountRepository {
 
-    override suspend fun postLogin(
+    override suspend fun login(
         email: String,
         password: String,
     ): Login {

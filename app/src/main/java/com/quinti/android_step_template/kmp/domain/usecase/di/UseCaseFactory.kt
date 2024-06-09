@@ -1,13 +1,13 @@
-package com.quinti.android_step_template.kmp.usecase.di
+package com.quinti.android_step_template.kmp.domain.usecase.di
 
 import com.quinti.android_step_template.kmp.data.repository.di.RepositoryFactory
-import com.quinti.android_step_template.kmp.usecase.LoginUseCase
-import com.quinti.android_step_template.kmp.usecase.PostLogin
+import com.quinti.android_step_template.kmp.domain.usecase.account.LoginUseCase
+import com.quinti.android_step_template.kmp.domain.usecase.account.LoginUseCaseImpl
 
 @Suppress("TooManyFunctions")
 interface UseCaseFactory {
 
-    fun createLoginUseCase() : LoginUseCase
+    fun createLoginUseCase(): LoginUseCase
 
 //    fun createActivateKyashCardUseCase(): ActivateKyashCardUseCase
 //    fun createCloseNotificationBannerUseCase(): CloseNotificationBannerUseCase
@@ -234,8 +234,8 @@ internal class UseCaseFactoryImpl(
 ) : UseCaseFactory {
 
     override fun createLoginUseCase(): LoginUseCase {
-        return PostLogin(
-            repository = repositoryFactory.createLoginRepository()
+        return LoginUseCaseImpl(
+            repository = repositoryFactory.createAccountRepository()
         )
     }
 
