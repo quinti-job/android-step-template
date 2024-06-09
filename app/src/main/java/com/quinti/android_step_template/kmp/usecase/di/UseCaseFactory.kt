@@ -1,6 +1,6 @@
 package com.quinti.android_step_template.kmp.usecase.di
 
-import com.quinti.android_step_template.kmp.repository.di.RepositoryFactory
+import com.quinti.android_step_template.kmp.data.repository.di.RepositoryFactory
 import com.quinti.android_step_template.kmp.usecase.LoginUseCase
 import com.quinti.android_step_template.kmp.usecase.PostLogin
 
