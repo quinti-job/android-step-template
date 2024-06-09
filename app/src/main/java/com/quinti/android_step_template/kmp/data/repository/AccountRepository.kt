@@ -4,8 +4,8 @@ import com.quinti.android_step_template.kmp.data.api.entity.Login
 import kotlinx.coroutines.flow.SharedFlow
 
 
-interface LoginRepository {
-    suspend fun postLogin(
+interface AccountRepository {
+    suspend fun login(
         email: String,
         password: String,
     ): Login

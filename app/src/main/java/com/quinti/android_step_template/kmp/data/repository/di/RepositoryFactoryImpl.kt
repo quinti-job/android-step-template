@@ -3,8 +3,8 @@ package com.quinti.android_step_template.kmp.data.repository.di
 import com.quinti.android_step_template.kmp.data.api.di.ApiFactory
 import com.quinti.android_step_template.kmp.data.datasource.di.LocalDataSourceFactory
 import com.quinti.android_step_template.kmp.debug.DevelopModeFactory
-import com.quinti.android_step_template.kmp.data.repository.LoginRepository
-import com.quinti.android_step_template.kmp.data.repository.LoginRepositoryImpl
+import com.quinti.android_step_template.kmp.data.repository.AccountRepository
+import com.quinti.android_step_template.kmp.data.repository.AccountRepositoryImpl
 
 fun provideRepositoryFactory(
     apiFactory: ApiFactory,
@@ -231,8 +231,8 @@ internal class RepositoryFactoryImpl(
 //        )
 //    }
 
-    override fun createLoginRepository(): LoginRepository {
-        return LoginRepositoryImpl(
+    override fun createAccountRepository(): AccountRepository {
+        return AccountRepositoryImpl(
             loginApi = apiFactory.createLoginApi(),
             localDataSource = localDataSourceFactory.createAccountDataSource(),
         )

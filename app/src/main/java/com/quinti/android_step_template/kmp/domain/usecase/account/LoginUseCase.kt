@@ -1,7 +1,7 @@
-package com.quinti.android_step_template.kmp.usecase
+package com.quinti.android_step_template.kmp.domain.usecase.account
 
 import com.quinti.android_step_template.kmp.data.api.entity.Login
-import com.quinti.android_step_template.kmp.data.repository.LoginRepository
+import com.quinti.android_step_template.kmp.data.repository.AccountRepository
 
 
 interface LoginUseCase {
@@ -11,14 +11,14 @@ interface LoginUseCase {
     ): Login
 }
 
-internal class PostLogin(
-    private val repository: LoginRepository,
+internal class LoginUseCaseImpl(
+    private val repository: AccountRepository,
 ) : LoginUseCase {
     override suspend fun invoke(
         email: String,
         password: String,
     ): Login {
-        return repository.postLogin(
+        return repository.login(
             email = email,
             password = password,
         )
