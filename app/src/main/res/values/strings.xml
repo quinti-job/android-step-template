@@ -1,3 +1,215 @@
 <resources>
     <string name="app_name">android-step-template</string>
+    <string name="sn_content_description_back">戻る</string>
+    <string name="sn_content_description_close">閉じる</string>
+
+    <string name="sn_load_state_error_title">読み込みに失敗しました。\nもう一度お試しください。</string>
+    <string name="sn_load_state_error_retry">再試行</string>
+    <string name="sn_dropdown_unselected">選択してください</string>
+    <string name="sn_text_field_amount_input_en_placeholder" translatable="false">¥0</string>
+
+
+    <string name="reward_title">リワード</string>
+    <string name="reward_kyach_coin_balance">%,d</string>
+    <string name="reward_weekly_prizes_label">ウィークリーチャレンジ</string>
+    <string name="reward_daily_prizes_label">デイリーチャレンジ</string>
+    <string name="reward_welcome_prizes_label">24時間限定チャレンジ</string>
+    <string name="reward_coming_soon_prizes_label">Coming Soon</string>
+    <string name="reward_weekly_prizes_description">毎週月曜日に新しいギフトが公開されます。コインがある限り、全てのギフトに応募可能です。</string>
+    <string name="reward_daily_prizes_description">毎日チャレンジできます。抽選にチャレンジできるのは1日1回までです。</string>
+    <string name="reward_welcome_prizes_description">リワードを始めて24時間以内の人だけが応募できる、限定チャレンジです！</string>
+    <string name="reward_about_reward_label">ガイド</string>
+
+    <string name="reward_prize_detail_title_dummy"></string>
+    <string name="reward_prize_detail_back">リワードトップへ戻る</string>
+    <string name="reward_prize_detail_sub_title_max_winners">%s人にプレゼント！</string>
+    <string name="reward_prize_detail_current_coin">保有コイン数: %,d</string>
+    <string name="reward_prize_detail_lottery_result_title">抽選結果</string>
+    <string name="reward_prize_detail_lottery_result_won">当選しました</string>
+    <string name="reward_prize_detail_lottery_result_lost">落選しました</string>
+    <string name="reward_prize_detail_lottery_result_check_expired_title">結果確認期限切れ</string>
+    <string name="reward_prize_detail_lottery_result_check_expired_description">※期限内に抽選結果の確認が行われなかったため</string>
+    <string name="reward_prize_detail_lottery_result_receive_expired_title">受取手続き期限切れ</string>
+    <string name="reward_prize_detail_lottery_result_receive_expired_description">※期限内にギフトの受取手続きが行われなかったため</string>
+    <string name="reward_prize_detail_receive_button_text">受け取る</string>
+    <string name="reward_prize_detail_gift_receive_button_text">ギフトの受取手続きをする</string>
+    <string name="reward_prize_detail_notice_caution_receive_expire_text">ギフトの受取手続き有効期限まであと%d日です</string>
+    <string name="reward_prize_detail_notice_caution_receive_expire_today_text">ギフトの受取手続き有効期限は本日です</string>
+
+    <string name="reward_prize_detail_description_title">このギフトに関して</string>
+    <string name="reward_prize_detail_entry_coin_sub_title">必要なコイン数</string>
+    <string name="reward_prize_detail_entry_coin_value">%,d</string>
+    <string name="reward_prize_detail_max_winners_sub_title">当選者数</string>
+    <string name="reward_prize_detail_notice_dot">・</string>
+    <string name="reward_prize_detail_notice_1">チャレンジ応募後のキャンセルはできません。</string>
+    <string name="reward_prize_detail_notice_2">当選者は受け取りの有効期限の2週間以内に受け取りのお手続きをする必要があります。</string>
+    <string name="reward_prize_detail_notice_3">ギフトの交換・換金・返品はできません。</string>
+    <string name="reward_prize_detail_notice_4">当社が必要と判断した場合には、当社は、予告なくいつでもチャレンジの内容を変更、停止、中止および終了することができるものとします。</string>
+    <string name="reward_prize_detail_notice_5">複数アカウントの作成は、アカウント制限の対象になります。</string>
+
+    <string name="reward_prize_detail_notice_receive_1">以下の受け取るリンクへアクセスし、表示された画面に従い、ご利用ください。</string>
+    <string name="reward_prize_detail_notice_receive_2">【注意事項等】</string>
+    <string name="reward_prize_detail_notice_receive_3">ギフトのご利用は、期限がございます。また期限の延長は致しかねますので、ご了承ください。</string>
+    <string name="reward_prize_detail_notice_receive_4">スマートフォンでご利用ください。</string>
+    <string name="reward_prize_detail_notice_receive_5">スクリーンショットではご利用いただけません。</string>
+    <string name="reward_prize_detail_notice_receive_6">都合により、商品内容が変更になる場合がございます。</string>
+    <string name="reward_prize_detail_notice_receive_7">当選権利の換金・他人への譲渡はできませんのでご注意ください。</string>
+    <string name="reward_prize_detail_notice_receive_8">いかなる理由があっても再発行は致しかねます。</string>
+    <string name="reward_prize_detail_notice_receive_9">転売することはできません。</string>
+    <string name="reward_prize_detail_notice_receive_10">本キャンペーンに関して応募者が被った損害または損失などについては、当社の故意または重過失に起因する場合を除き、当社は一切の責任を負わないものとします。</string>
+    <string name="reward_prize_detail_notice_receive_11">【お問い合わせ】\n本キャンペーンについてのお問い合わせは、お問い合わせフォームまたは、アプリからご連絡ください。\n株式会社Kyash</string>
+
+    <string name="reward_prize_detail_apply_weekly">応募する</string>
+    <string name="reward_prize_detail_apply_daily">抽選にチャレンジ</string>
+    <string name="reward_prize_detail_status_label_applicable">応募できます</string>
+    <string name="reward_prize_detail_status_label_applied">応募済み</string>
+    <string name="reward_prize_detail_status_label_applied_before_announcement_days">抽選発表まで%d日</string>
+    <string name="reward_prize_detail_status_label_closed">チャレンジ終了</string>
+    <string name="reward_prize_detail_status_label_comingSoon">Coming Soon</string>
+    <string name="reward_prize_detail_status_label_remaining_coin">あと%,dコイン！</string>
+    <string name="reward_prize_detail_amount">%,d</string>
+    <string name="reward_prize_detail_notice_caution_coin">あと%,dコイン必要です</string>
+    <string name="reward_prize_detail_notice_caution_help">Kyashコインってどう貯めるの？</string>
+    <string name="reward_prize_detail_remaining_time_label">抽選発表まで</string>
+    <string name="reward_prize_detail_remaining_time_days">日</string>
+    <string name="reward_prize_detail_remaining_time_hours">時間</string>
+    <string name="reward_prize_detail_remaining_time_minutes">分</string>
+    <string name="reward_prize_detail_remaining_time_seconds">秒</string>
+    <string name="reward_prize_detail_sns_share_label">＼ シェアすると当選確率が上がるよ！ ／</string>
+    <string name="reward_prize_detail_sns_share_button">X(Twitter)でシェアする</string>
+    <string name="reward_prize_detail_about_receive_kyash_coin_title">Kyashコインの貯め方</string>
+    <string name="reward_prize_detail_about_receive_kyash_coin_description">Kyashコインの貯め方は2種類あります。</string>
+    <string name="reward_prize_detail_about_receive_kyash_coin_section1_title">1. Kyashで決済を行う</string>
+    <string name="reward_prize_detail_about_receive_kyash_coin_section1_description">1円のお支払いで1コインが貯まります。\n決済で獲得したコインは0時〜1時頃に付与されます。</string>
+    <string name="reward_prize_detail_about_receive_kyash_coin_section2_title">2. デイリールーレットを回す</string>
+    <string name="reward_prize_detail_about_receive_kyash_coin_section2_description">はずれなしで、1日1回まで回すことができます。</string>
+
+    <string name="reward_prize_detail_notification_setting_1">通知をオン</string>
+    <string name="reward_prize_detail_notification_setting_2">にして抽選結果を受け取る</string>
+
+    <string name="reward_prize_detail_application_confirmation_dialog_title">応募してもよろしいですか？</string>
+    <string name="reward_prize_detail_application_confirmation_dialog_description">%,dコインを使用して「%s」に応募します。</string>
+    <string name="reward_prize_detail_application_confirmation_dialog_positive">応募する</string>
+
+    <string name="reward_prize_detail_daily_application_confirmation_dialog_title">抽選にチャレンジしてもよろしいですか？</string>
+    <string name="reward_prize_detail_daily_application_confirmation_dialog_description">%,dコインを使用して「%s」の抽選にチャレンジします。</string>
+    <string name="reward_prize_detail_daily_application_confirmation_dialog_positive">チャレンジ</string>
+
+    <string name="reward_prize_detail_application_result_pending_title">応募が完了しました！</string>
+    <string name="reward_prize_detail_application_result_pending_description">抽選結果は来週月曜日の9時に発表されます。</string>
+
+    <string name="reward_prize_detail_application_deadline_weekly_title">応募期限を過ぎました</string>
+    <string name="reward_prize_detail_application_deadline_weekly_description">応募期限を過ぎたため、応募できません。</string>
+    <string name="reward_prize_detail_application_deadline_daily_title">抽選にチャレンジできる期限を過ぎました</string>
+    <string name="reward_prize_detail_application_deadline_daily_description">抽選にチャレンジできる期限を過ぎたため、応募できません。</string>
+    <string name="reward_prize_detail_application_reached_maximum_winners_title">本日分のチャレンジは終了しました</string>
+    <string name="reward_prize_detail_application_reached_maximum_winners_description">本日分のチャレンジが終了したため、チャレンジできません。</string>
+
+    <string name="reward_prize_detail_application_result_won_title">おめでとうございます！\n当選しました！</string>
+    <string name="reward_prize_detail_application_result_won_description_weekly">たくさんの応募があった中、あなたが選ばれました！</string>
+    <string name="reward_prize_detail_application_result_won_description_daily">ギフトの受取手続きを行なってください。</string>
+    <string name="reward_prize_detail_application_result_won_title_point">当選おめでとうございます！\nポイントを獲得しました！</string>
+    <string name="reward_prize_detail_application_result_won_description_welcome">たくさんの応募があった中、あなたが選ばれました！</string>
+    <string name="reward_prize_detail_application_result_won_receive_label">ギフトの受取手続き有効期限</string>
+    <string name="reward_prize_detail_application_result_won_receive_label_kyash_point">※ポイントは1ポイント=1円で使用できます。</string>
+    <string name="reward_prize_detail_application_result_won_receive_notion">※次のページからは外部サイトに遷移します</string>
+    <string name="reward_prize_detail_application_result_won_receive_button">ギフトの受取手続きへ進む</string>
+
+    <string name="reward_prize_detail_application_result_lost_title">ざんねん… 落選です</string>
+    <string name="reward_prize_detail_application_result_lost_description_weekly">今回の勝者は別の方です。\nまた、次回のチャレンジをお待ちしております！</string>
+    <string name="reward_prize_detail_application_result_lost_description_daily">今回の勝者は別の方でした&#8230;\n他のチャレンジでリベンジしましょう！</string>
+    <string name="reward_prize_detail_application_result_lost_button">トップに戻る</string>
+    <string name="reward_prize_detail_application_result_consolation_prize_label">＼ サンキューコインが届いています！ ／</string>
+    <string name="reward_prize_detail_application_result_consolation_prize_button">コインを受け取る</string>
+    <string name="reward_prize_consolation_prize_kyash_coin_title">コインを獲得しました！</string>
+    <string name="reward_prize_consolation_prize_kyash_coin_description">コインを使って他のチャレンジで\nリベンジしましょう！</string>
+
+    <string name="reward_remaining_days">残り%d日</string>
+    <string name="reward_remaining_past">残り -</string>
+    <string name="reward_remaining_date_times">残り %d:%02d:%02d</string>
+    <string name="reward_share_sns_applied_share_title">応募したことをシェアする</string>
+    <string name="reward_share_sns_applied_share_text">%sを抽選でプレゼント！Kyashの%sに応募しました。 #Kyash #Kyashコイン %s</string>
+    <string name="reward_share_sns_won_share_label">当選したことをシェアする</string>
+    <string name="reward_share_sns_won_share_title">当選の喜びをシェアしませんか？</string>
+    <string name="reward_share_sns_won_share_text">%sを抽選でプレゼント！Kyashの%sに応募しました。 #Kyash #Kyashコイン %s</string>
+    <string name="reward_prize_challenge_weekly">ウィークリーチャレンジ</string>
+    <string name="reward_prize_challenge_daily">デイリーチャレンジ</string>
+    <string name="reward_prize_challenge_welcome">24時間限定チャレンジ</string>
+
+    <string name="reward_prize_application_history_title">リワードチャレンジ応募履歴</string>
+    <string name="reward_prize_application_history_tab_weekly">ウィークリー</string>
+    <string name="reward_prize_application_history_tab_daily">デイリー</string>
+    <string name="reward_prize_application_history_empty">応募履歴がありません</string>
+
+    <string name="reward_applied_prize_list_announce_expire_remaining_days">結果発表あと%d日</string>
+    <string name="reward_applied_prize_list_announce_expire_remaining_current">本日結果発表</string>
+    <string name="reward_applied_prize_list_check_expire_remaining_days">結果確認あと%d日</string>
+    <string name="reward_applied_prize_list_check_expire_remaining_current">結果確認本日まで</string>
+    <string name="reward_applied_prize_list_receive_expire_remaining_days">受取期限あと%s日</string>
+    <string name="reward_applied_prize_list_receive_expire_remaining_current">受取期限本日まで</string>
+
+    <string name="reward_applied_prize_list_applied_at">%sに応募</string>
+    <string name="reward_applied_prize_list_won">当選</string>
+    <string name="reward_applied_prize_list_lost">落選</string>
+    <string name="reward_applied_prize_list_receive_flow">受取手続きをする</string>
+    <string name="reward_applied_prize_list_check_result">抽選結果を確認する</string>
+
+    <string name="reward_daily_roulette_title">デイリールーレット</string>
+    <string name="reward_daily_roulette_message_yet">1日1回、ルーレットを回してコインを獲得しよう！</string>
+    <string name="reward_daily_roulette_message_done">今日はチャレンジ済みです！明日も来てね！</string>
+    <string name="reward_daily_roulette_message_completed">コインを獲得しました！</string>
+    <string name="reward_daily_roulette_draw_button">ルーレットを回す</string>
+    <string name="reward_daily_roulette_lottery_result_placeholder">----</string>
+
+    <string name="reward_onboarding_bottom_sheet_title">リワードへようこそ</string>
+    <string name="reward_onboarding_bottom_sheet_description">Kyashコインを貯めると、豪華ギフトが獲得できるチャレンジに応募することができます。</string>
+    <string name="reward_onboarding_bottom_sheet_content_1_title">Kyashコインとは？</string>
+    <string name="reward_onboarding_bottom_sheet_content_1_description">決済した際 (1円で1コイン) やデイリールーレットなどで獲得できる、Kyashアプリ内のコインのことです。</string>
+    <string name="reward_onboarding_bottom_sheet_content_1_annotation">※決済で獲得したコインは0時〜1時頃に付与されます。</string>
+    <string name="reward_onboarding_bottom_sheet_content_2_title">コインを貯めてチャレンジに応募しよう</string>
+    <string name="reward_onboarding_bottom_sheet_content_2_description">Kyashコインが貯まると、豪華ギフトに応募できるチャレンジに参加することができます。</string>
+    <string name="reward_onboarding_bottom_sheet_button">はじめる</string>
+    <string name="reward_onboarding_tooltip_reward_top_daily_roulette">まずは、デイリールーレットを回して\nコインをゲットしよう！</string>
+    <string name="reward_onboarding_tooltip_reward_top_first_challenge">獲得したコインを使ってチャレンジしてみよう！</string>
+
+    <string name="reward_kyash_coin_detail_title">Kyashコイン</string>
+    <string name="reward_kyash_coin_detail_expiry_coin_title">今月失効するコイン：</string>
+
+    <string name="reward_kyash_coin_detail_history_title">獲得・利用履歴</string>
+    <string name="reward_kyash_coin_detail_history_consumed_subtitle">利用</string>
+    <string name="reward_kyash_coin_detail_history_received_subtitle">獲得</string>
+    <string name="reward_kyash_coin_detail_history_expired_subtitle">失効</string>
+    <string name="reward_kyash_coin_detail_history_amount_plus">+ %,d</string>
+    <string name="reward_kyash_coin_detail_history_amount_minus">- %,d</string>
+
+    <string name="reward_stamp_banner_title">デイリーチャレンジスタンプ</string>
+    <string name="reward_stamp_banner_description">チャレンジして報酬を獲得しよう！</string>
+    <string name="reward_stamp_bottom_sheet_title">デイリーチャレンジスタンプ</string>
+    <string name="reward_stamp_bottom_sheet_description">デイリーチャレンジ１回ごとにスタンプが１つ貯まります！スタンプを貯めて報酬を獲得しよう！</string>
+    <string name="reward_stamp_bottom_sheet_count">%1$d回目</string>
+    <string name="reward_stamp_bottom_sheet_close_button">閉じる</string>
+
+    <string name="reward_stamp_onboarding_title">デイリーチャレンジスタンプが登場！</string>
+    <string name="reward_stamp_onboarding_description">デイリーチャレンジ１回ごとにスタンプが１つ貯まります！スタンプを貯めてコインやポイントを獲得しよう！</string>
+    <string name="reward_stamp_onboarding_ok_button">OK</string>
+
+    <string name="reward_coach_mark_bold_description">すぐに決済で使える\n100円分ポイントがもらえる！？</string>
+
+    <string name="reward_offerwall_service_provider_agreement_title">これより先は株式会社Skyfallの\nウェブサイトです</string>
+    <string name="reward_offerwall_service_provider_agreement_description">オファーウォールは、株式会社Skyfallと株式会社Kyashが提供するサービスです。このサービスに関する問い合わせは、株式会社Skyfallへお願いします。</string>
+    <string name="reward_offerwall_personal_information_agreement_description">Kyashが第三者へ次の情報（Kyashプライバシーポリシー）を取得し、私を本人とする個人データと結合することに同意します。</string>
+    <string name="reward_offerwall_personal_information_agreement_description_link">Kyashプライバシーポリシー</string>
+    <string name="reward_offerwall_personal_information_agreement_button">同意する</string>
+    <string name="reward_offerwall_personal_information_agreement_cansel_button">キャンセル</string>
+    <string name="reward_offerwall_maintenance_title">ただいまメンテナンス中です</string>
+    <string name="reward_offerwall_maintenance_description">ご迷惑をおかけし申し訳ございませんが、メンテナンス終了まで今しばらくお待ちください。</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
 </resources>
