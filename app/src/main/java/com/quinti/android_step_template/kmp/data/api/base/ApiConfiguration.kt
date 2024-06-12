@@ -1,4 +1,4 @@
-package com.quinti.android_step_template.kmp.data.api
+package com.quinti.android_step_template.kmp.data.api.base
 
 import korlibs.time.TimeSpan
 import korlibs.time.seconds

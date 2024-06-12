@@ -1,4 +1,4 @@
-package com.quinti.android_step_template.kmp.data.api
+package com.quinti.android_step_template.kmp.data.api.base
 
 /**
  * API Endpoint 接続情報

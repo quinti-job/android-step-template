@@ -2,7 +2,7 @@ package com.quinti.android_step_template.kmp.data.repository.di
 
 import com.quinti.android_step_template.kmp.data.api.di.ApiFactory
 import com.quinti.android_step_template.kmp.data.datasource.di.LocalDataSourceFactory
-import com.quinti.android_step_template.kmp.debug.DevelopModeFactory
+import com.quinti.android_step_template.kmp.data.debug.DevelopModeFactory
 import com.quinti.android_step_template.kmp.data.repository.AccountRepository
 import com.quinti.android_step_template.kmp.data.repository.AccountRepositoryImpl
 

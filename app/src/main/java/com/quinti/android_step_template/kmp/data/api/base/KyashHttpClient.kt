@@ -1,4 +1,4 @@
-package com.quinti.android_step_template.kmp.data.api
+package com.quinti.android_step_template.kmp.data.api.base
 
 import android.util.Log
 import com.quinti.android_step_template.kmp.data.api.serialization.HttpStatusCodeSerializer
