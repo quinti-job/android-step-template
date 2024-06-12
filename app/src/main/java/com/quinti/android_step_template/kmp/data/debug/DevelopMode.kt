@@ -1,4 +1,4 @@
-package com.quinti.android_step_template.kmp.debug
+package com.quinti.android_step_template.kmp.data.debug
 
 import kotlinx.coroutines.delay
 
