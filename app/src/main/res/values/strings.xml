@@ -8,6 +8,18 @@
     <string name="sn_dropdown_unselected">選択してください</string>
     <string name="sn_text_field_amount_input_en_placeholder" translatable="false">¥0</string>
 
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <string name="close">閉じる</string>
+
 
     <string name="reward_title">リワード</string>
     <string name="reward_kyach_coin_balance">%,d</string>
@@ -140,6 +152,8 @@
     <string name="reward_prize_application_history_tab_weekly">ウィークリー</string>
     <string name="reward_prize_application_history_tab_daily">デイリー</string>
     <string name="reward_prize_application_history_empty">応募履歴がありません</string>
+    <string name="reward_button_all">すべて</string>
+    <string name="reward_button_tousen">当選</string>
 
     <string name="reward_applied_prize_list_announce_expire_remaining_days">結果発表あと%d日</string>
     <string name="reward_applied_prize_list_announce_expire_remaining_current">本日結果発表</string>
@@ -196,20 +210,27 @@
     <string name="reward_coach_mark_bold_description">すぐに決済で使える\n100円分ポイントがもらえる！？</string>
 
     <string name="reward_offerwall_service_provider_agreement_title">これより先は株式会社Skyfallの\nウェブサイトです</string>
-    <string name="reward_offerwall_service_provider_agreement_description">オファーウォールは、株式会社Skyfallと株式会社Kyashが提供するサービスです。このサービスに関する問い合わせは、株式会社Skyfallへお願いします。</string>
-    <string name="reward_offerwall_personal_information_agreement_description">Kyashが第三者へ次の情報（Kyashプライバシーポリシー）を取得し、私を本人とする個人データと結合することに同意します。</string>
-    <string name="reward_offerwall_personal_information_agreement_description_link">Kyashプライバシーポリシー</string>
+    <string name="reward_offerwall_service_provider_agreement_description">Kyashポイントパークは、株式会社Skyfallと株式会社Kyashが提供するサービスです。このサービスに関する問い合わせは、株式会社Skyfallへお願いします。</string>
+    <string name="reward_offerwall_personal_information_agreement_description_1">Kyashポイントパークの利用にあたり、以下の内容を確認、同意の上、利用します。</string>
+    <string name="reward_offerwall_personal_information_agreement_description_2">株式会社Kyash（当社）が、利用者の個人情報（ユーザーID）を株式会社Skyfallに提供し、Kyashポイントパークのサービス提供のために利用すること。</string>
+    <string name="reward_offerwall_personal_information_agreement_description_3">当社が、株式会社Skyfallから利用者の個人関連情報（ユーザーID、Kyashポイントパークの利用実績等に関する情報）の提供を受け、利用者の個人情報として取得の上、利用者へのKyashポイント付与、その他Kyashプライバシーポリシーに定める利用目的に利用すること。</string>
+    <string name="reward_offerwall_personal_information_agreement_description_4">Kyashプライバシーポリシーはこちら</string>
+    <string name="reward_offerwall_personal_information_agreement_description_link">こちら</string>
     <string name="reward_offerwall_personal_information_agreement_button">同意する</string>
     <string name="reward_offerwall_personal_information_agreement_cansel_button">キャンセル</string>
     <string name="reward_offerwall_maintenance_title">ただいまメンテナンス中です</string>
     <string name="reward_offerwall_maintenance_description">ご迷惑をおかけし申し訳ございませんが、メンテナンス終了まで今しばらくお待ちください。</string>
-    <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome!"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
+
+    <string name="reward_onboading_welcome_challenge_title">すぐに決済で使える\n100円分ポイントがもらえるチャンス！</string>
+    <string name="reward_onboading_welcome_challenge_description">ポイントは1ポイント=1円で使用できます。</string>
+    <string name="reward_onboading_welcome_challenge_result_title">当選おめでとうございます！ \nポイントを獲得しました！</string>
+    <string name="reward_onboading_welcome_challenge_result_description">ぜひ、Kyashでの決済で使ってみてください。</string>
+    <string name="reward_onboading_welcome_challenge_result_content_item_title">Kyashリワード</string>
+    <string name="reward_onboading_welcome_challenge_result_content_item_description1">Kyashコインを貯めて</string>
+    <string name="reward_onboading_welcome_challenge_result_content_item_description2">豪華ギフトが当たるチャンス！</string>
+
+    <string name="reward_offerwall_version_not_supported_title">Kyashポイントパークは\nAndroid 9以上でご利用いただけます</string>
+    <string name="reward_offerwall_version_not_supported_description">お使いのAndroidバージョンはKyashポイントパークに対応していません。</string>
+
 </resources>
+
