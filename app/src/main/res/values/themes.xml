@@ -2,4 +2,192 @@
 <resources>
 
     <style name="Theme.Androidsteptemplate" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="KyashThemeBase" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/gray_04</item>
+        <item name="colorAccent">@color/blue</item>
+        <item name="colorControlHighlight">@color/ripple_color</item>
+        <item name="colorControlActivated">@color/blue</item>
+        <item name="colorControlNormal">@color/gray_02</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:textColor">@color/gray_01</item>
+        <item name="android:textColorPrimary">@color/gray_01</item>
+        <item name="android:textColorSecondary">@color/gray_02</item>
+        <item name="android:textColorPrimaryInverse">@color/white</item>
+        <item name="android:textColorSecondaryInverse">@color/white</item>
+        <item name="android:statusBarColor">@color/status_bar</item>
+        <item name="buttonStyle">@style/Kyash.Button.Accent</item>
+        <item name="toolbarStyle">@style/Kyash.Toolbar</item>
+        <item name="actionMenuTextColor">@color/gray_01</item>
+        <item name="android:windowAnimationStyle">@style/Kyash.Animation.Activity</item>
+        <item name="alertDialogTheme">@style/KyashThemeOverlay.Dialog.Alert</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.Kyash.MaterialAlertDialog</item>
+        <item name="editTextStyle">@style/Kyash.EditText</item>
+        <item name="materialCalendarTheme">@style/ThemeOverlay.Kyash.MaterialCalendar</item>
+    </style>
+
+    <style name="KyashTheme" parent="KyashThemeBase">
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/kyash_blue</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_logo_kyash_splash</item>
+        <item name="windowSplashScreenAnimationDuration">0</item>
+    </style>
+
+    <!--
+    MainActivity 向けの Edge To Edge テーマ
+    -->
+    <style name="KyashTheme.Main">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+
+    <!-- 透明なActivityのテーマ -->
+    <style name="KyashTheme.Translucent">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:statusBarColor">@color/dialog_bg</item>
+    </style>
+
+    <!-- ステータスバー色変更 (カード詳細用) -->
+    <style name="KyashTheme.SaxStatusBar">
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/sax</item>
+    </style>
+
+    <!-- ステータスバー色変更 (ライセンス用) -->
+    <style name="KyashTheme.BlackStateBar">
+        <item name="android:statusBarColor">@color/black</item>
+    </style>
+
+    <!-- フルスクリーンテーマ（スプラッシュ用） -->
+    <style name="KyashTheme.FullScreen">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!-- EdgeToEdge対応テーマ -->
+    <style name="KyashTheme.EdgeToEdge">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/edge_to_edge_nav_bar</item>
+    </style>
+
+    <!-- EdgeToEdge対応テーマ メニューカラー青-->
+    <style name="KyashTheme.EdgeToEdge.BlueActionMenu">
+        <item name="actionMenuTextColor">@color/blue</item>
+    </style>
+
+    <!-- 緑色テーマ（トランザクション） -->
+    <style name="KyashTheme.TransactionGreen">
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorAccent">@color/green</item>
+        <item name="colorControlActivated">@color/green</item>
+    </style>
+
+    <!-- 緑色テーマ（請求） -->
+    <style name="KyashTheme.GreenBase">
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryDark">@color/green_dark</item>
+        <item name="colorAccent">@color/green</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="buttonStyle">@style/Kyash.Button.Green</item>
+        <item name="toolbarStyle">@style/Kyash.Toolbar.Green</item>
+        <item name="actionMenuTextColor">@color/white</item>
+        <item name="android:statusBarColor">@color/kyash_green</item>
+    </style>
+
+    <!-- 緑色テーマ（請求） -->
+    <style name="KyashTheme.Green" parent="KyashTheme.GreenBase">
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="KyashTheme.Green.DefaultStatusBar" parent="KyashTheme.Green">
+        <item name="android:statusBarColor">@color/status_bar</item>
+        <item name="colorControlActivated">@color/green</item>
+        <item name="actionMenuTextColor">@color/green</item>
+    </style>
+
+    <!-- 青色テーマ（送金） -->
+    <style name="KyashTheme.BlueBase">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryDark">@color/blue_dark</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="buttonStyle">@style/Kyash.Button.Blue</item>
+        <item name="toolbarStyle">@style/Kyash.Toolbar.Blue</item>
+        <item name="actionMenuTextColor">@color/white</item>
+        <item name="android:statusBarColor">@color/kyash_blue</item>
+    </style>
+
+    <!-- 青色テーマ（送金） -->
+    <style name="KyashTheme.Blue" parent="KyashTheme.BlueBase">
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <!-- 青色テーマ（EMV） -->
+    <style name="KyashTheme.Blue.DefaultStatusBar" parent="KyashTheme.BlueBase">
+        <item name="android:statusBarColor">@color/status_bar</item>
+        <item name="colorControlActivated">@color/blue</item>
+        <item name="actionMenuTextColor">@color/blue</item>
+    </style>
+
+    <!-- ステータスバー透明化用テーマ -->
+    <style name="KyashTheme.Blue.TranslucentStateBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <!-- 黒色テーマ（画像ビューア） -->
+    <style name="KyashTheme.BlackBase">
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="KyashTheme.Black" parent="@style/KyashTheme.BlackBase">
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <!-- Bottom Sheet -->
+    <style name="KyashTheme.BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Kyash.BottomSheet</item>
+    </style>
+
+    <!--
+        MaterialComponentsのThemeOverlayを継承したStyle。
+        内部的に`enableEdgeToEdge`がtrueになっているためEdgeToEdge対応したActivityに乗る場合はこちらを使う。
+    -->
+    <style name="ThemeOverlay.KyashTheme.BottomSheetDialog" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Kyash.BottomSheet</item>
+        <item name="paddingTopSystemWindowInsets">false</item>
+    </style>
+
+    <!-- 標準のFade+Slideではなく純粋なSlideInのときはこちらを使う。 -->
+    <style name="ThemeOverlay.KyashTheme.BottomSheetDialog.SlideIn">
+        <item name="android:windowAnimationStyle">
+            @style/KyashTheme.Animation.MaterialComponents.BottomSheetDialog.SlideIn
+        </item>
+    </style>
+
+    <style name="KyashTheme.Animation.MaterialComponents.BottomSheetDialog.SlideIn" parent="Animation.AppCompat.Dialog">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom_medium</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_top_medium</item>
+    </style>
+
+    <!-- Checkbox -->
+    <style name="CheckBoxTheme">
+        <item name="colorControlActivated">?attr/colorAccent</item>
+    </style>
+
+    <style name="ThemeOverlay.Kyash.MaterialCalendar" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="colorPrimary">@color/blue</item>
+    </style>
 </resources>

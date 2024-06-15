@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/reward_nav_graph" app:startDestination="@id/home">
+
+<!--    <include app:graph="@navigation/reward_offerwall_nav_graph" />-->
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.quinti.android_step_template.ui.screen.home.HomeFragment">
+<!--        <deepLink app:uri="kyash://internal/coupon" />-->
+<!--        <deepLink app:uri="kyash://secured/reward" />-->
+
+<!--        <action-->
+<!--            android:id="@+id/toPrizeDetail"-->
+<!--            app:destination="@id/prizeDetail"-->
+<!--            app:enterAnim="@anim/pull_in_from_right"-->
+<!--            app:exitAnim="@anim/fade_out_medium"-->
+<!--            app:popExitAnim="@anim/pull_out_to_right">-->
+<!--            <argument-->
+<!--                android:name="prize"-->
+<!--                app:argType="co.kyash.ui.reward.transfer.CoinPrizeTransfer" />-->
+<!--        </action>-->
+
+<!--        <action-->
+<!--            android:id="@+id/toDailyRoulette"-->
+<!--            app:destination="@id/dailyRoulette"-->
+<!--            app:enterAnim="@anim/slide_in_bottom_short"-->
+<!--            app:exitAnim="@anim/fade_out_medium"-->
+<!--            app:popExitAnim="@anim/slide_out_top_short" />-->
+
+
+<!--        <action-->
+<!--            android:id="@+id/toAppliedPrizeList"-->
+<!--            app:destination="@id/appliedPrizeList"-->
+<!--            app:enterAnim="@anim/pull_in_from_right"-->
+<!--            app:exitAnim="@anim/fade_out_medium"-->
+<!--            app:popExitAnim="@anim/pull_out_to_right" />-->
+
+<!--        <action-->
+<!--            android:id="@+id/toRewardOnboarding"-->
+<!--            app:destination="@id/rewardOnboardingDialog" />-->
+
+<!--        <action-->
+<!--            android:id="@+id/toKyashCoinDetail"-->
+<!--            app:destination="@id/kyashCoinDetail"-->
+<!--            app:enterAnim="@anim/pull_in_from_right"-->
+<!--            app:exitAnim="@anim/fade_out_medium"-->
+<!--            app:popExitAnim="@anim/pull_out_to_right"  />-->
+
+<!--        <action-->
+<!--            android:id="@+id/toRewardStampBottomSheetDialog"-->
+<!--            app:destination="@id/RewardStampBottomSheetDialog">-->
+<!--            <argument-->
+<!--                android:name="stampCard"-->
+<!--                app:argType="co.kyash.ui.reward.transfer.StampCardUiStateTransfer" />-->
+<!--        </action>-->
+
+<!--        <action-->
+<!--            android:id="@+id/toRewardStampOnboardingDialogFragment"-->
+<!--            app:destination="@id/rewardStampOnboardingDialogFragment">-->
+<!--        </action>-->
+
+<!--        <action-->
+<!--            android:id="@+id/toOfferWallFragment"-->
+<!--            app:destination="@id/reward_offerwall_nav_graph"-->
+<!--            app:enterAnim="@anim/slide_in_bottom_short"-->
+<!--            app:exitAnim="@anim/fade_out_medium"-->
+<!--            app:popExitAnim="@anim/slide_out_top_short" />-->
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/myProfile"
+        android:name="com.quinti.android_step_template.ui.screen.myprofile.MyProfileFragment">
+<!--        <deepLink app:uri="kyash://internal/coupon/detail/{prizeId}" />-->
+<!--        <deepLink app:uri="kyash://secured/reward/prizes/{prizeId}" />-->
+<!--        <argument-->
+<!--            android:name="prize"-->
+<!--            app:argType="co.kyash.ui.reward.transfer.CoinPrizeTransfer"-->
+<!--            android:defaultValue="@null"-->
+<!--            app:nullable="true" />-->
+<!--        <argument-->
+<!--            android:name="prizeId"-->
+<!--            app:argType="string"-->
+<!--            app:nullable="false" />-->
+
+<!--        <action-->
+<!--            android:id="@+id/toApplicationResult"-->
+<!--            app:destination="@id/prizeApplicationResult"-->
+<!--            app:enterAnim="@anim/slide_in_bottom_short"-->
+<!--            app:exitAnim="@anim/fade_out_medium"-->
+<!--            app:popExitAnim="@anim/slide_out_top_short" />-->
+    </fragment>
+
+    <fragment
+        android:id="@+id/timeLine"
+        android:name="com.quinti.android_step_template.ui.screen.timeline.TimeLineFragment" />
+
+    <fragment
+        android:id="@+id/chatList"
+        android:name="com.quinti.android_step_template.ui.screen.chatlist.ChatListFragment">
+<!--        <argument-->
+<!--            android:name="applicationResult"-->
+<!--            app:argType="co.kyash.ui.reward.transfer.PrizeApplicationResultTransfer" />-->
+
+<!--        <action-->
+<!--            android:id="@+id/toPrizeShareToSnsWhenWonDialog"-->
+<!--            app:destination="@id/prizeShareToSnsWhenWonDialog"-->
+<!--            app:popUpTo="@id/prizeApplicationResult"-->
+<!--            app:popUpToInclusive="true" />-->
+<!--        <action-->
+<!--            android:id="@+id/toOfferWallFragment"-->
+<!--            app:destination="@id/reward_offerwall_nav_graph"-->
+<!--            app:enterAnim="@anim/slide_in_bottom_short"-->
+<!--            app:exitAnim="@anim/fade_out_medium"-->
+<!--            app:popExitAnim="@anim/slide_out_top_short" />-->
+    </fragment>
+
+    <fragment
+        android:id="@+id/setting"
+        android:name="com.quinti.android_step_template.ui.screen.setting.SettingFragment">
+<!--        <action-->
+<!--            android:id="@+id/toPrizeDetail"-->
+<!--            app:destination="@id/prizeDetail"-->
+<!--            app:enterAnim="@anim/pull_in_from_right"-->
+<!--            app:exitAnim="@anim/fade_out_medium"-->
+<!--            app:popExitAnim="@anim/pull_out_to_right">-->
+<!--            <argument-->
+<!--                android:name="prize"-->
+<!--                app:argType="co.kyash.ui.reward.transfer.CoinPrizeTransfer" />-->
+<!--        </action>-->
+
+
+<!--        <action-->
+<!--            android:id="@+id/toApplicationResult"-->
+<!--            app:destination="@id/prizeApplicationResult"-->
+<!--            app:enterAnim="@anim/slide_in_bottom_short"-->
+<!--            app:exitAnim="@anim/fade_out_medium"-->
+<!--            app:popExitAnim="@anim/slide_out_top_short" />-->
+
+    </fragment>
+
+<!--    <fragment-->
+<!--        android:id="@+id/kyashCoinDetail"-->
+<!--        android:name="co.kyash.ui.reward.coin.KyashCoinDetailFragment">-->
+<!--    </fragment>-->
+
+<!--    <dialog-->
+<!--        android:id="@+id/rewardOnboardingDialog"-->
+<!--        android:name="co.kyash.ui.reward.top.onboarding.RewardOnboardingFragment"-->
+<!--        android:label="RewardOnboardingDialogFragment" />-->
+
+<!--    <dialog-->
+<!--        android:id="@+id/prizeShareToSnsWhenWonDialog"-->
+<!--        android:name="co.kyash.ui.reward.prize.result.ShareToSnsWhenWonDialogFragment"-->
+<!--        android:label="PrizeShareSnsDialogFragment">-->
+<!--        &lt;!&ndash; Argumentは-->
+<!--            val title: String,-->
+<!--            val imageUrl: String,-->
+<!--            val type: Prize.Type,-->
+<!--            &ndash;&gt;-->
+<!--        <argument-->
+<!--            android:name="title"-->
+<!--            app:argType="string" />-->
+<!--        <argument-->
+<!--            android:name="imageUrl"-->
+<!--            app:argType="string" />-->
+<!--        <argument-->
+<!--            android:name="type"-->
+<!--            app:argType="co.kyash.mobile.model.reward.Prize$Type" />-->
+<!--    </dialog>-->
+
+    <dialog
+        android:id="@+id/rewardStampBottomSheetDialog"
+        android:name="com.quinti.android_step_template.ui.screen.stamp.RewardStampBottomSheetDialogFragment"
+        android:label="RewardStampBottomSheetDialogFragment" >
+        <argument
+            android:name="stampCard"
+            app:argType="com.quinti.android_step_template.ui.screen.stamp.ui.transfer.StampCardUiStateTransfer" />
+    </dialog>
+
+<!--    <dialog-->
+<!--        android:id="@+id/rewardStampOnboardingDialogFragment"-->
+<!--        android:name="co.kyash.ui.reward.top.onboarding.RewardStampOnboardingDialogFragment"-->
+<!--        android:label="RewardStampOnboardingDialogFragment" >-->
+<!--    </dialog>-->
+
+</navigation>
