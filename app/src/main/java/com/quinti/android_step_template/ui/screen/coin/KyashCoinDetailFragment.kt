@@ -11,12 +11,14 @@ import androidx.compose.ui.platform.ViewCompositionStrategy
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.quinti.android_step_template.kmp.domain.analytics.EventTracker
 import com.quinti.android_step_template.util.KyashSupportUrls
 import com.quinti.android_step_template.kmp.domain.reactor.KyashCoinDetailReactor
 import com.quinti.android_step_template.kmp.domain.util.collectWithLifecycle
 import com.quinti.android_step_template.ui.navigator.FragmentRouter
 import com.quinti.android_step_template.ui.navigator.Router
 import com.quinti.android_step_template.ui.theme.SocialNetworkTheme
+import com.quinti.android_step_template.kmp.domain.analytics.LocalEventTracker
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -29,11 +31,8 @@ class KyashCoinDetailFragment : Fragment() {
     @Inject
     lateinit var router: Router
 
-//    @Inject
-//    lateinit var eventTracker: EventTracker
-
-//    @Inject
-//    lateinit var releaseFlag: ReleaseFlag
+    @Inject
+    lateinit var eventTracker: EventTracker
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,7 +50,9 @@ class KyashCoinDetailFragment : Fragment() {
         return ComposeView(requireContext()).apply {
             setViewCompositionStrategy(ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed)
             setContent {
-                CompositionLocalProvider {
+                CompositionLocalProvider(
+                    LocalEventTracker provides eventTracker,
+                ) {
                     SocialNetworkTheme {
                         KyashCoinDetailScreen(
                             viewModel = viewModel,

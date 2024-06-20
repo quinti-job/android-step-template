@@ -11,6 +11,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.quinti.android_step_template.R
+import com.quinti.android_step_template.kmp.domain.analytics.TrackScreenEventV2
+import com.quinti.android_step_template.kmp.domain.analytics.Tracking
 import com.quinti.android_step_template.kmp.domain.reactor.KyashCoinDetailReactor
 import com.quinti.android_step_template.kmp.domain.reactor.base.Reactor
 import com.quinti.android_step_template.ui.component.KyashBackTopAppBar
@@ -23,7 +25,7 @@ fun KyashCoinDetailScreen(
 ) {
     val state by viewModel.reactor.state.collectAsStateWithLifecycle()
 
-//    TrackScreenEvent(screen = Tracking.Screen.CoinDetail, trackOnResume = true)
+    TrackScreenEventV2(screen = Tracking.Screen.CoinDetail, trackOnResume = true)
     KyashCoinDetailScreen(
         state = state,
         onNavigationClick = viewModel::onNavigationClick,

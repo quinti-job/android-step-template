@@ -1,5 +1,7 @@
 package com.quinti.android_step_template.ui.screen.coin
 
+import com.quinti.android_step_template.kmp.domain.analytics.EventTracker
+import com.quinti.android_step_template.kmp.domain.analytics.Tracking
 import com.quinti.android_step_template.kmp.domain.reactor.KyashCoinDetailReactor
 import com.quinti.android_step_template.kmp.domain.reactor.base.ReactorViewModel
 import com.quinti.android_step_template.kmp.domain.reactor.di.ReactorDiContainer
@@ -8,7 +10,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class KyashCoinDetailViewModel @Inject constructor(
-//    private val tracker: EventTracker,
+    private val tracker: EventTracker,
     reactorDiContainer: ReactorDiContainer,
 ) : ReactorViewModel<KyashCoinDetailReactor>(
     reactorDiContainer.createKyashCoinDetailReactor(),
@@ -34,7 +36,7 @@ class KyashCoinDetailViewModel @Inject constructor(
     }
 
     fun onHelpClick() {
-//        tracker.trackEvent(Tracking.Action.RewardCoinDetail.ClickHelp)
+        tracker.trackEvent(Tracking.Action.RewardCoinDetail.ClickHelp)
         reactor.execute(KyashCoinDetailReactor.Action.TapInformation)
     }
 }
