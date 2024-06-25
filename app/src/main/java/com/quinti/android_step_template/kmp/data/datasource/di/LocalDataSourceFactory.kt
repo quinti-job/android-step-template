@@ -2,6 +2,10 @@ package com.quinti.android_step_template.kmp.data.datasource.di
 
 import com.quinti.android_step_template.kmp.data.datasource.AccountLocalDataSource
 import com.quinti.android_step_template.kmp.data.datasource.AccountPersistenceDataSource
+import com.quinti.android_step_template.kmp.data.datasource.CoinPrizeInMemoryDataSource
+import com.quinti.android_step_template.kmp.data.datasource.CoinPrizeLocalDataSource
+import com.quinti.android_step_template.kmp.data.datasource.RewardLocalDataSource
+import com.quinti.android_step_template.kmp.data.datasource.RewardPersistenceDataSource
 
 interface LocalDataSourceFactory {
 
@@ -14,13 +18,13 @@ interface LocalDataSourceFactory {
 //    fun createBudgetSettingLocalDataSource(): BudgetSettingLocalDataSource
 //
 //    fun createCustomCategoryDraftLocalDataSource(): CustomCategoryDraftLocalDataSource
-//
-//    fun createCoinPrizeLocalDataSource(): CoinPrizeLocalDataSource
-//
-//    fun createCoinPrizePaginationLocalDataSource(): CoinPrizePageLocalDataSource
-//
-//    fun createRewardLocalDataSource(): RewardLocalDataSource
-//
+
+    fun createCoinPrizeLocalDataSource(): CoinPrizeLocalDataSource
+
+    fun createCoinPrizePaginationLocalDataSource(): CoinPrizePageLocalDataSource
+
+    fun createRewardLocalDataSource(): RewardLocalDataSource
+
 //    fun createUserJourneyLocalDataSource(): UserJourneyLocalDataSource
 
     companion object {
@@ -41,9 +45,9 @@ class SingletonLocalDataSourceFactory private constructor() : LocalDataSourceFac
 
 //    private val budgetSettingLocalDataSource = BudgetSettingInMemoryLocalDataSource()
 //    private val customCategoryDraftLocalDataSource = CustomCategoryDraftInMemoryLocalDataSource()
-//    private val coinPrizeLocalDataSource = CoinPrizeInMemoryDataSource()
+    private val coinPrizeLocalDataSource = CoinPrizeInMemoryDataSource()
 //    private val coinPrizePaginationLocalDataSource = CoinPrizePageInMemoryDataSource()
-//    private val rewardLocalDataSource = RewardPersistenceDataSource()
+    private val rewardLocalDataSource = RewardPersistenceDataSource()
 //    private val userJourneyLocalDataSource = UserJourneyPersistenceDataSource()
 
     override fun createAccountDataSource(): AccountLocalDataSource {
@@ -66,19 +70,19 @@ class SingletonLocalDataSourceFactory private constructor() : LocalDataSourceFac
 //    override fun createCustomCategoryDraftLocalDataSource(): CustomCategoryDraftLocalDataSource {
 //        return customCategoryDraftLocalDataSource
 //    }
-//
-//    override fun createCoinPrizeLocalDataSource(): CoinPrizeLocalDataSource {
-//        return coinPrizeLocalDataSource
-//    }
-//
-//    override fun createCoinPrizePaginationLocalDataSource(): CoinPrizePageLocalDataSource {
-//        return coinPrizePaginationLocalDataSource
-//    }
-//
-//    override fun createRewardLocalDataSource(): RewardLocalDataSource {
-//        return rewardLocalDataSource
-//    }
-//
+
+    override fun createCoinPrizeLocalDataSource(): CoinPrizeLocalDataSource {
+        return coinPrizeLocalDataSource
+    }
+
+    override fun createCoinPrizePaginationLocalDataSource(): CoinPrizePageLocalDataSource {
+        return coinPrizePaginationLocalDataSource
+    }
+
+    override fun createRewardLocalDataSource(): RewardLocalDataSource {
+        return rewardLocalDataSource
+    }
+
 //    override fun createUserJourneyLocalDataSource(): UserJourneyLocalDataSource {
 //        return userJourneyLocalDataSource
 //    }

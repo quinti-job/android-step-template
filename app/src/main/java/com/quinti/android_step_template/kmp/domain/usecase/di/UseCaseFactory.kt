@@ -1,6 +1,16 @@
 package com.quinti.android_step_template.kmp.domain.usecase.di
 
 import com.quinti.android_step_template.kmp.data.repository.di.RepositoryFactory
+import com.quinti.android_step_template.kmp.domain.usecase.GetDailyRouletteOptions
+import com.quinti.android_step_template.kmp.domain.usecase.GetDailyRouletteOptionsUseCase
+import com.quinti.android_step_template.kmp.domain.usecase.GetDailyRouletteStatus
+import com.quinti.android_step_template.kmp.domain.usecase.GetDailyRouletteStatusUseCase
+import com.quinti.android_step_template.kmp.domain.usecase.GetKyashCoinAmount
+import com.quinti.android_step_template.kmp.domain.usecase.GetKyashCoinAmountUseCase
+import com.quinti.android_step_template.kmp.domain.usecase.GetPointBalance
+import com.quinti.android_step_template.kmp.domain.usecase.GetPointBalanceUseCase
+import com.quinti.android_step_template.kmp.domain.usecase.QueryAppliedDailyPrizes
+import com.quinti.android_step_template.kmp.domain.usecase.QueryAppliedDailyPrizesUseCase
 import com.quinti.android_step_template.kmp.domain.usecase.account.LoginUseCase
 import com.quinti.android_step_template.kmp.domain.usecase.account.LoginUseCaseImpl
 
@@ -102,7 +112,7 @@ interface UseCaseFactory {
 //    fun createGetPayrollAccountUseCase(): GetPayrollAccountUseCase
 //    fun createRegisterEvacuationAccountUseCase(): RegisterEvacuationAccountUseCase
 //    fun createRequestPayrollAccountRegistrationUseCase(): RequestPayrollAccountRegistrationUseCase
-//    fun createGetPointBalanceUseCase(): GetPointBalanceUseCase
+    fun createGetPointBalanceUseCase(): GetPointBalanceUseCase
 //    fun createFindAddressUseCase(): FindAddressUseCase
 //    fun createGetFriendInvitationUrlUseCase(): GetFriendInvitationUrlUseCase
 //    fun createRegisterOtherOwnedBankAccountUseCase(): RegisterOtherOwnedBankAccountUseCase
@@ -127,19 +137,19 @@ interface UseCaseFactory {
 //    fun createGetWalletTimelineUseCase(): GetWalletTimelineUseCase
 //    fun createSetPaymentWalletUseCase(): SetPaymentWalletUseCase
 //    fun createUpdateTimelinesCategoryUseCase(): UpdateTimelinesCategoryUseCase
-//
-//    // region KyashCoin
-//    fun createGetKyashCoinAmountUseCase(): GetKyashCoinAmountUseCase
-//
-//    fun createGetDailyRouletteStatusUseCase(): GetDailyRouletteStatusUseCase
-//
+
+    // region KyashCoin
+    fun createGetKyashCoinAmountUseCase(): GetKyashCoinAmountUseCase
+
+    fun createGetDailyRouletteStatusUseCase(): GetDailyRouletteStatusUseCase
+
 //    fun createGetCoinPrizeUseCase(): GetCoinPrizeUseCase
 //
 //    fun createApplyCoinPrizeUseCase(): ApplyCoinPrizeUseCase
 //
 //    fun createGetDailyRouletteResultUseCase(): GetDailyRouletteResultUseCase
 //
-//    fun createGetDailyRouletteOptionsUseCase(): GetDailyRouletteOptionsUseCase
+    fun createGetDailyRouletteOptionsUseCase(): GetDailyRouletteOptionsUseCase
 //
 //    fun createReceivePrizeUseCase(): ReceivePrizeUseCase
 //
@@ -161,7 +171,7 @@ interface UseCaseFactory {
 //    fun createQueryAppliedWeeklyPrizesUseCase(): QueryAppliedWeeklyPrizesUseCase
 //    fun createRefreshAppliedDailyPrizesUseCase(): RefreshAppliedDailyPrizesUseCase
 //    fun createWatchAppliedDailyPrizesUseCase(): WatchAppliedDailyPrizesUseCase
-//    fun createQueryAppliedDailyPrizesUseCase(): QueryAppliedDailyPrizesUseCase
+    fun createQueryAppliedDailyPrizesUseCase(): QueryAppliedDailyPrizesUseCase
 //    fun createNeedShowRewardTopOnboardingUseCase(): NeedShowRewardTopOnboardingUseCase
 //    fun createSetShowRewardTopOnboardingUseCase(): SetShowRewardTopOnboardingUseCase
 //    fun createNeedShowRewardTabNewBalloonUseCase(): NeedShowRewardTabNewBalloonUseCase
@@ -680,13 +690,13 @@ internal class UseCaseFactoryImpl(
 //            repository = repositoryFactory.createPayrollRepository(),
 //        )
 //    }
-//
-//    override fun createGetPointBalanceUseCase(): GetPointBalanceUseCase {
-//        return GetPointBalance(
-//            repository = repositoryFactory.createPointRepository(),
-//        )
-//    }
-//
+
+    override fun createGetPointBalanceUseCase(): GetPointBalanceUseCase {
+        return GetPointBalance(
+            repository = repositoryFactory.createPointRepository(),
+        )
+    }
+
 //    override fun createFindAddressUseCase(): FindAddressUseCase {
 //        return FindAddress(
 //            repository = repositoryFactory.createPostalRepository(),
@@ -791,19 +801,19 @@ internal class UseCaseFactoryImpl(
 //            timelineRepository = repositoryFactory.createTimelineRepository(),
 //        )
 //    }
-//
-//    override fun createGetKyashCoinAmountUseCase(): GetKyashCoinAmountUseCase {
-//        return GetKyashCoinAmount(
-//            repository = repositoryFactory.createKyashCoinRepository(),
-//        )
-//    }
-//
-//    override fun createGetDailyRouletteStatusUseCase(): GetDailyRouletteStatusUseCase {
-//        return GetDailyRouletteStatus(
-//            repository = repositoryFactory.createKyashCoinRepository(),
-//        )
-//    }
-//
+
+    override fun createGetKyashCoinAmountUseCase(): GetKyashCoinAmountUseCase {
+        return GetKyashCoinAmount(
+            repository = repositoryFactory.createKyashCoinRepository(),
+        )
+    }
+
+    override fun createGetDailyRouletteStatusUseCase(): GetDailyRouletteStatusUseCase {
+        return GetDailyRouletteStatus(
+            repository = repositoryFactory.createKyashCoinRepository(),
+        )
+    }
+
 //    override fun createGetCoinPrizeUseCase(): GetCoinPrizeUseCase {
 //        return GetCoinPrize(
 //            repository = repositoryFactory.createKyashPrizeRepository(),
@@ -821,13 +831,13 @@ internal class UseCaseFactoryImpl(
 //            repository = repositoryFactory.createKyashCoinRepository(),
 //        )
 //    }
-//
-//    override fun createGetDailyRouletteOptionsUseCase(): GetDailyRouletteOptionsUseCase {
-//        return GetDailyRouletteOptions(
-//            repository = repositoryFactory.createKyashCoinRepository(),
-//        )
-//    }
-//
+
+    override fun createGetDailyRouletteOptionsUseCase(): GetDailyRouletteOptionsUseCase {
+        return GetDailyRouletteOptions(
+            repository = repositoryFactory.createKyashCoinRepository(),
+        )
+    }
+
 //    override fun createReceivePrizeUseCase(): ReceivePrizeUseCase {
 //        return ReceivePrize(
 //            kyashCoinRepository = repositoryFactory.createKyashPrizeRepository(),
@@ -903,13 +913,13 @@ internal class UseCaseFactoryImpl(
 //            prizeRepository = repositoryFactory.createKyashPrizeRepository(),
 //        )
 //    }
-//
-//    override fun createQueryAppliedDailyPrizesUseCase(): QueryAppliedDailyPrizesUseCase {
-//        return QueryAppliedDailyPrizes(
-//            prizeRepository = repositoryFactory.createKyashPrizeRepository(),
-//        )
-//    }
-//
+
+    override fun createQueryAppliedDailyPrizesUseCase(): QueryAppliedDailyPrizesUseCase {
+        return QueryAppliedDailyPrizes(
+            prizeRepository = repositoryFactory.createKyashPrizeRepository(),
+        )
+    }
+
 //    override fun createNeedShowRewardTopOnboardingUseCase(): NeedShowRewardTopOnboardingUseCase {
 //        return NeedShowRewardTopOnboarding(
 //            kyashCoinRepository = repositoryFactory.createKyashCoinRepository(),

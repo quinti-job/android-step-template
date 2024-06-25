@@ -2,9 +2,15 @@ package com.quinti.android_step_template.kmp.data.repository.di
 
 import com.quinti.android_step_template.kmp.data.api.di.ApiFactory
 import com.quinti.android_step_template.kmp.data.datasource.di.LocalDataSourceFactory
-import com.quinti.android_step_template.kmp.debug.DevelopModeFactory
+import com.quinti.android_step_template.kmp.data.debug.DevelopModeFactory
 import com.quinti.android_step_template.kmp.data.repository.AccountRepository
 import com.quinti.android_step_template.kmp.data.repository.AccountRepositoryImpl
+import com.quinti.android_step_template.kmp.data.repository.KyashCoinRepository
+import com.quinti.android_step_template.kmp.data.repository.KyashCoinRepositoryImpl
+import com.quinti.android_step_template.kmp.data.repository.PointRepository
+import com.quinti.android_step_template.kmp.data.repository.PointRepositoryImpl
+import com.quinti.android_step_template.kmp.data.repository.PrizeRepository
+import com.quinti.android_step_template.kmp.data.repository.PrizeRepositoryImpl
 
 fun provideRepositoryFactory(
     apiFactory: ApiFactory,
@@ -43,13 +49,13 @@ internal class RepositoryFactoryImpl(
 //            personalInformationApi = apiFactory.createPersonalInformationApi(),
 //        )
 //    }
-//
-//    override fun createPointRepository(): PointRepository {
-//        return PointRepositoryImpl(
-//            api = apiFactory.createPointApi(),
-//        )
-//    }
-//
+
+    override fun createPointRepository(): PointRepository {
+        return PointRepositoryImpl(
+            api = apiFactory.createPointApi(),
+        )
+    }
+
 //    override fun createPostalRepository(): PostalRepository {
 //        return PostalRepositoryImpl(
 //            postalApi = apiFactory.createPostalApi(),
@@ -73,15 +79,14 @@ internal class RepositoryFactoryImpl(
 //            timelineApi = apiFactory.createTimelineApi(),
 //        )
 //    }
-//
-//    override fun createKyashCoinRepository(): KyashCoinRepository {
-//        return KyashCoinRepositoryImpl(
-//            kyashCoinApi = apiFactory.createKyashCoinApi(),
-//            localDataSource = localDataSourceFactory.createRewardLocalDataSource(),
-//            isRewardOnboarding202404Enabled = releaseFlag.isRewardOnboarding202404Enabled,
-//        )
-//    }
-//
+
+    override fun createKyashCoinRepository(): KyashCoinRepository {
+        return KyashCoinRepositoryImpl(
+            kyashCoinApi = apiFactory.createKyashCoinApi(),
+            localDataSource = localDataSourceFactory.createRewardLocalDataSource(),
+        )
+    }
+
 //    override fun createOfferWallRepository(): OfferWallRepository {
 //        return OfferWallRepositoryImpl(
 //            api = apiFactory.createOfferWallApi(),
@@ -143,16 +148,16 @@ internal class RepositoryFactoryImpl(
 //            meApi = apiFactory.createMeApi(),
 //        )
 //    }
-//
-//    override fun createKyashPrizeRepository(): PrizeRepository {
-//        return PrizeRepositoryImpl(
-//            prizeLocalDataSource = localDataSourceFactory.createCoinPrizeLocalDataSource(),
-//            prizePageLocalDataSource = localDataSourceFactory
-//                .createCoinPrizePaginationLocalDataSource(),
-//            prizeApi = apiFactory.createKyashCoinApi(),
-//        )
-//    }
-//
+
+    override fun createKyashPrizeRepository(): PrizeRepository {
+        return PrizeRepositoryImpl(
+            prizeLocalDataSource = localDataSourceFactory.createCoinPrizeLocalDataSource(),
+            prizePageLocalDataSource = localDataSourceFactory
+                .createCoinPrizePaginationLocalDataSource(),
+            prizeApi = apiFactory.createKyashCoinApi(),
+        )
+    }
+
 //    override fun createBudgetRepository(): BudgetRepository {
 //        return BudgetRepositoryImpl(
 //            localDataSource = localDataSourceFactory.createBudgetSettingLocalDataSource(),

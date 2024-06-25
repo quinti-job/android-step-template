@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?><!-- このNavGraphは元々のお買い物タブと入れ替えるため、couponをIDとしている -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coupon_nav_graph"
+    app:startDestination="@id/coupon">
+
+    <fragment
+        android:id="@+id/coupon"
+        android:name="com.quinti.android_step_template.ui.screen.top.RewardTopFragment">
+        <deepLink app:uri="kyash://internal/coupon" />
+        <deepLink app:uri="kyash://secured/reward" />
+
+<!--        <action-->
+<!--            android:id="@+id/toPrizeDetail"-->
+<!--            app:destination="@id/prizeDetail" >-->
+<!--            <argument-->
+<!--                android:name="prize"-->
+<!--                app:argType="co.kyash.ui.reward.transfer.CoinPrizeTransfer" />-->
+<!--        </action>-->
+
+        <action
+            android:id="@+id/toDailyRoulette"
+            app:destination="@id/dailyRoulette" />
+
+
+        <action
+            android:id="@+id/toAppliedPrizeList"
+            app:destination="@id/appliedPrizeList" />
+
+<!--        <action-->
+<!--            android:id="@+id/toRewardOnboarding"-->
+<!--            app:destination="@id/rewardOnboardingDialog" />-->
+
+        <action
+            android:id="@+id/toKyashCoinDetail" />
+
+        <action
+            android:id="@+id/toRewardStampBottomSheetDialog"
+            app:destination="@id/RewardStampBottomSheetDialog">
+            <argument
+                android:name="stampCard"
+                app:argType="co.kyash.ui.reward.transfer.StampCardUiStateTransfer" />
+        </action>
+
+<!--        <action-->
+<!--            android:id="@+id/toRewardStampOnboardingDialogFragment"-->
+<!--            app:destination="@id/rewardStampOnboardingDialogFragment">-->
+<!--        </action>-->
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/dailyRoulette"
+        android:name="com.quinti.android_step_template.ui.screen.roulette.DailyRouletteFragment" />
+
+    <fragment
+        android:id="@+id/appliedPrizeList"
+        android:name="com.quinti.android_step_template.ui.screen.prize.AppliedPrizeListFragment">
+<!--        <action-->
+<!--            android:id="@+id/toPrizeDetail"-->
+<!--            app:destination="@id/prizeDetail" >-->
+<!--            <argument-->
+<!--                android:name="prize"-->
+<!--                app:argType="co.kyash.ui.reward.transfer.CoinPrizeTransfer" />-->
+<!--        </action>-->
+
+
+<!--        <action-->
+<!--            android:id="@+id/toApplicationResult"-->
+<!--            app:destination="@id/prizeApplicationResult" />-->
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/kyashCoinDetail"
+        android:name="com.quinti.android_step_template.ui.screen.coin.KyashCoinDetailFragment">
+    </fragment>
+
+    <dialog
+        android:id="@+id/RewardStampBottomSheetDialog"
+        android:name="com.quinti.android_step_template.ui.screen.stamp.RewardStampBottomSheetDialogFragment"
+        android:label="RewardStampBottomSheetDialogFragment" >
+        <argument
+            android:name="stampCard"
+            app:argType="co.kyash.ui.reward.transfer.StampCardUiStateTransfer" />
+    </dialog>
+
+</navigation>

@@ -1,6 +1,6 @@
 package com.quinti.android_step_template.kmp.data.repository
 
-import com.quinti.android_step_template.kmp.data.api.entity.Login
+import com.quinti.android_step_template.kmp.data.entity.Login
 import kotlinx.coroutines.flow.SharedFlow
 
 
