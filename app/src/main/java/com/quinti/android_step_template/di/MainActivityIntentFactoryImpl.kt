@@ -7,10 +7,12 @@ import co.kyash.model.entity.WalletId
 import co.kyash.ui.main.MainActivityIntentFactory
 import co.kyash.ui.main.Route
 import com.quinti.android_step_template.MainActivity
+import com.quinti.android_step_template.ui.MainActivityIntentFactory
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import okhttp3.Route
 
 private class MainActivityIntentFactoryImpl : MainActivityIntentFactory {
     override fun create(

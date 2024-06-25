@@ -4,7 +4,7 @@ import com.quinti.android_step_template.kmp.domain.analytics.EventTracker
 import com.quinti.android_step_template.kmp.domain.analytics.Tracking
 import com.quinti.android_step_template.kmp.domain.reactor.KyashCoinDetailReactor
 import com.quinti.android_step_template.kmp.domain.reactor.base.ReactorViewModel
-import com.quinti.android_step_template.kmp.domain.reactor.di.ReactorDiContainer
+import com.quinti.android_step_template.kmp.di.ReactorDiContainer
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

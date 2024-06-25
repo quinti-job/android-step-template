@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.dagger.hilt.android)
     alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.kotlin.parcelize)
 }
 
 android {
@@ -72,6 +73,7 @@ dependencies {
     implementation(libs.androidx.legacy.support.v4)
     implementation(libs.androidx.browser)
     implementation(libs.androidx.core.i18n)
+    implementation(libs.firebase.components)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -95,6 +97,13 @@ dependencies {
     // Dagger Hilt
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
+
+    // lottie
+    implementation(libs.ui.lottie)
+    implementation(libs.ui.lottieCompose)
+
+    implementation(libs.ui.coil.compose)
+
 }
 
 kapt {

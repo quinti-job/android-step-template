@@ -1,7 +1,7 @@
 package com.quinti.android_step_template.kmp.domain.usecase
 
-import co.kyash.mobile.model.reward.DailyRouletteOptions
-import co.kyash.mobile.repository.KyashCoinRepository
+import com.quinti.android_step_template.kmp.data.entity.DailyRouletteOptions
+import com.quinti.android_step_template.kmp.data.repository.KyashCoinRepository
 
 interface GetDailyRouletteOptionsUseCase {
     suspend operator fun invoke(): DailyRouletteOptions

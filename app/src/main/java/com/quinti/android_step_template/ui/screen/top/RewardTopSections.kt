@@ -61,34 +61,26 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import co.kyash.analytics.LocalEventTracker
-import co.kyash.kig.compose.KyashSwipeRefresh
-import co.kyash.kig.compose.clickableWithoutDoubleTap
-import co.kyash.kig.compose.dimen40dp
-import co.kyash.kig.compose.theme.SocialNetworkTheme
-import co.kyash.log.Tracking
-import co.kyash.mobile.model.point.PointBalance
-import co.kyash.mobile.model.reward.Prize
-import co.kyash.mobile.reward.PrizeApplicableStatus
-import co.kyash.mobile.reward.RemainingTimeType
-import co.kyash.mobile.reward.top.RewardTopReactor
-import co.kyash.reward.R
-import co.kyash.ui.KyashPreviewTheme
-import co.kyash.ui.core.compose.LocalOfferWallEnabled
-import co.kyash.ui.core.tooling.preview.PreviewFontScales
-import co.kyash.ui.reward.compose.DisabledKyashCoinIcon
-import co.kyash.ui.reward.compose.DisabledPointIcon
-import co.kyash.ui.reward.compose.KyashCoinIcon
-import co.kyash.ui.reward.compose.KyashCoinWithIcon
-import co.kyash.ui.reward.compose.KyashPointWithIcon
-import co.kyash.ui.reward.compose.PrizeApplicationStatusBadge
-import co.kyash.ui.reward.getRemainingTimeText
 import coil.compose.rememberAsyncImagePainter
 import com.quinti.android_step_template.R
+import com.quinti.android_step_template.kmp.data.entity.Prize
+import com.quinti.android_step_template.kmp.data.entity.PrizeApplicableStatus
+import com.quinti.android_step_template.kmp.data.entity.RemainingTimeType
+import com.quinti.android_step_template.kmp.domain.analytics.LocalEventTracker
+import com.quinti.android_step_template.kmp.domain.analytics.Tracking
 import com.quinti.android_step_template.kmp.domain.reactor.RewardTopReactor
+import com.quinti.android_step_template.ui.component.DisabledKyashCoinIcon
+import com.quinti.android_step_template.ui.component.DisabledPointIcon
+import com.quinti.android_step_template.ui.component.KyashCoinIcon
 import com.quinti.android_step_template.ui.component.KyashCoinWithIcon
+import com.quinti.android_step_template.ui.component.KyashPointWithIcon
+import com.quinti.android_step_template.ui.component.KyashSwipeRefresh
+import com.quinti.android_step_template.ui.component.PointBalance
+import com.quinti.android_step_template.ui.component.PrizeApplicationStatusBadge
+import com.quinti.android_step_template.ui.component.clickableWithoutDoubleTap
 import com.quinti.android_step_template.ui.theme.SocialNetworkTheme
 import com.quinti.android_step_template.util.PreviewFontScales
+import com.quinti.android_step_template.util.getRemainingTimeText
 import korlibs.time.DateTime
 import korlibs.time.DateTimeTz
 import kotlinx.coroutines.flow.filter
@@ -103,7 +95,7 @@ fun KyashCoinButton(
     Box(
         modifier = modifier
             .padding(horizontal = 2.dp)
-            .clip(RoundedCornerShape(dimen40dp))
+            .clip(RoundedCornerShape(SocialNetworkTheme.spacing.xxl))
             .clickableWithoutDoubleTap(
                 onClick = onClick,
             )
@@ -115,7 +107,10 @@ fun KyashCoinButton(
         KyashCoinWithIcon(
             amount = kyashCoinAmount,
             modifier = Modifier
-                .padding(horizontal = SocialNetworkTheme.spacing.m, vertical = SocialNetworkTheme.spacing.xs),
+                .padding(
+                    horizontal = SocialNetworkTheme.spacing.m,
+                    vertical = SocialNetworkTheme.spacing.xs
+                ),
         )
     }
 }
@@ -129,7 +124,7 @@ fun KyashPointButton(
     Box(
         modifier = modifier
             .padding(horizontal = 2.dp)
-            .clip(RoundedCornerShape(dimen40dp))
+            .clip(RoundedCornerShape(SocialNetworkTheme.spacing.xxl))
             .clickableWithoutDoubleTap(
                 onClick = onClick,
             )
@@ -141,7 +136,10 @@ fun KyashPointButton(
         KyashPointWithIcon(
             amount = pointBalance,
             modifier = Modifier
-                .padding(horizontal = SocialNetworkTheme.spacing.m, vertical = SocialNetworkTheme.spacing.xs),
+                .padding(
+                    horizontal = SocialNetworkTheme.spacing.m,
+                    vertical = SocialNetworkTheme.spacing.xs
+                ),
         )
     }
 }
@@ -197,8 +195,6 @@ fun RewardTopSections(
             )
         }
 
-        val offerWallEnable = LocalOfferWallEnabled.current
-
         LazyColumn(
             horizontalAlignment = Alignment.Start,
             contentPadding = PaddingValues(vertical = SocialNetworkTheme.spacing.m),
@@ -213,18 +209,14 @@ fun RewardTopSections(
                 }
             }
 
-            if (offerWallEnable) {
-                item { Spacer(modifier = Modifier.height(SocialNetworkTheme.spacing.xs)) }
-                item {
-                    OfferWallBanner(
-                        modifier = Modifier,
-                        onClick = onTapOfferWallBanner,
-                    )
-                }
-                item { Spacer(modifier = Modifier.height(SocialNetworkTheme.spacing.xl)) }
-            } else {
-                item { Spacer(modifier = Modifier.height(SocialNetworkTheme.spacing.xl)) }
+            item { Spacer(modifier = Modifier.height(SocialNetworkTheme.spacing.xs)) }
+            item {
+                OfferWallBanner(
+                    modifier = Modifier,
+                    onClick = onTapOfferWallBanner,
+                )
             }
+            item { Spacer(modifier = Modifier.height(SocialNetworkTheme.spacing.xl)) }
 
             if (welcomePrizes.isNotEmpty()) {
                 item {
@@ -328,7 +320,10 @@ private fun TopCarouselSection(
                     Box(
                         modifier = Modifier
                             .align(Alignment.TopEnd)
-                            .offset(x = SocialNetworkTheme.spacing.xs, y = -SocialNetworkTheme.spacing.xs)
+                            .offset(
+                                x = SocialNetworkTheme.spacing.xs,
+                                y = -SocialNetworkTheme.spacing.xs
+                            )
                             .background(
                                 color = SocialNetworkTheme.colors.caution,
                                 shape = CircleShape,
@@ -1275,7 +1270,7 @@ private fun PrizeItemPreview_NotYetApplicable() {
     SocialNetworkTheme {
         Surface {
             WeeklyPrizeItem(
-                imagePainter = painterResource(id = co.kyash.core.R.drawable.img_walkthrough_05),
+                imagePainter = painterResource(id = R.drawable.img_walkthrough_01),
                 title = "AirPods Pro",
                 maxWinners = Prize.MaxWinners.Limited(10),
                 entryCoinRatio = 0.6f,
@@ -1295,7 +1290,7 @@ private fun PrizeItemPreview_Applicable() {
     SocialNetworkTheme {
         Surface {
             WeeklyPrizeItem(
-                imagePainter = painterResource(id = co.kyash.core.R.drawable.img_walkthrough_05),
+                imagePainter = painterResource(id = R.drawable.img_walkthrough_01),
                 title = "AirPods Pro",
                 maxWinners = Prize.MaxWinners.Limited(10),
                 entryCoinRatio = 0.6f,
@@ -1315,7 +1310,7 @@ private fun PrizeItemPreview_Applied() {
     SocialNetworkTheme {
         Surface {
             WeeklyPrizeItem(
-                imagePainter = painterResource(id = co.kyash.core.R.drawable.img_walkthrough_05),
+                imagePainter = painterResource(id = R.drawable.img_walkthrough_01),
                 title = "AirPods Pro",
                 maxWinners = Prize.MaxWinners.Limited(10),
                 entryCoinRatio = 0.6f,
@@ -1335,7 +1330,7 @@ private fun PrizeItemPreview_Closed() {
     SocialNetworkTheme {
         Surface {
             WeeklyPrizeItem(
-                imagePainter = painterResource(id = co.kyash.core.R.drawable.img_walkthrough_05),
+                imagePainter = painterResource(id = R.drawable.img_walkthrough_01),
                 title = "AirPods Pro",
                 maxWinners = Prize.MaxWinners.Limited(10),
                 entryCoinRatio = 0.6f,
@@ -1357,7 +1352,7 @@ private fun PrizeItemPreview_Shortage() {
     SocialNetworkTheme {
         Surface {
             WeeklyPrizeItem(
-                imagePainter = painterResource(id = co.kyash.core.R.drawable.img_walkthrough_05),
+                imagePainter = painterResource(id = R.drawable.img_walkthrough_01),
                 title = "AirPods Pro",
                 maxWinners = Prize.MaxWinners.Limited(10),
                 entryCoinRatio = 0.6f,
@@ -1377,7 +1372,7 @@ private fun DailyPrizeItemPreview_Shortage() {
     SocialNetworkTheme {
         Surface {
             DailyPrizeItem(
-                imagePainter = painterResource(id = co.kyash.core.R.drawable.img_walkthrough_05),
+                imagePainter = painterResource(id = R.drawable.img_walkthrough_01),
                 title = "AirPods ProAirPods ProAirPods ProAirPods Pro",
                 maxWinners = Prize.MaxWinners.Limited(10),
                 entryCoinRatio = 0.6f,
@@ -1396,7 +1391,7 @@ private fun DailyPrizeItemPreview_Unlimited() {
     SocialNetworkTheme {
         Surface {
             DailyPrizeItem(
-                imagePainter = painterResource(id = co.kyash.core.R.drawable.img_walkthrough_05),
+                imagePainter = painterResource(id = R.drawable.img_walkthrough_01),
                 title = "AirPods ProAirPods ProAirPods ProAirPods Pro",
                 maxWinners = Prize.MaxWinners.Unlimited,
                 entryCoinRatio = 0.6f,
@@ -1414,5 +1409,3 @@ private fun DailyPrizeItemPreview_Unlimited() {
 fun StampBannerPreview() {
     StampBanner(onClickStampBanner = {})
 }
-
-

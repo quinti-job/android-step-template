@@ -140,8 +140,8 @@ interface Router {
 //        memo: String?,
 //    )
 
-//    fun navigateToPointHistory()
-//
+    fun navigateToPointHistory()
+
 //    fun navigateToOfferWall()
 
 //    // SignIn/Up
@@ -364,40 +364,40 @@ interface Router {
         dismissCallback: (() -> Unit)? = null,
     )
 
-//    fun showAlertDialog(
-//        @StringRes title: Int? = null,
-//        @StringRes message: Int? = null,
-//        @LayoutRes layoutId: Int? = null,
-//        @StringRes ok: Int? = R.string.ok,
-//        okCallback: (() -> Unit)? = null,
-//        @StringRes cancel: Int? = null,
-//        @DrawableRes iconResId: Int? = null,
-//        cancelCallback: (() -> Unit)? = null,
-//        dismissCallback: (() -> Unit)? = null,
-//        cancelable: Boolean = true,
-//    )
+    fun showAlertDialog(
+        @StringRes title: Int? = null,
+        @StringRes message: Int? = null,
+        @LayoutRes layoutId: Int? = null,
+        @StringRes ok: Int? = R.string.ok,
+        okCallback: (() -> Unit)? = null,
+        @StringRes cancel: Int? = null,
+        @DrawableRes iconResId: Int? = null,
+        cancelCallback: (() -> Unit)? = null,
+        dismissCallback: (() -> Unit)? = null,
+        cancelable: Boolean = true,
+    )
 
-//    fun showAlertDialog(
-//        title: String? = null,
-//        message: String? = null,
-//        @LayoutRes layoutId: Int? = null,
-//        @StringRes ok: Int? = R.string.ok,
-//        okCallback: (() -> Unit)? = null,
-//        @StringRes cancel: Int? = null,
-//        @DrawableRes iconResId: Int? = null,
-//        cancelCallback: (() -> Unit)? = null,
-//        dismissCallback: (() -> Unit)? = null,
-//        cancelable: Boolean = true,
-//    )
+    fun showAlertDialog(
+        title: String? = null,
+        message: String? = null,
+        @LayoutRes layoutId: Int? = null,
+        @StringRes ok: Int? = R.string.ok,
+        okCallback: (() -> Unit)? = null,
+        @StringRes cancel: Int? = null,
+        @DrawableRes iconResId: Int? = null,
+        cancelCallback: (() -> Unit)? = null,
+        dismissCallback: (() -> Unit)? = null,
+        cancelable: Boolean = true,
+    )
 
     // Navigate system settings
     fun navigateSystemNotificationSetting()
 
     // Toast
-//    fun showToast(message: String?)
-//    fun showApiErrorToast(throwable: Throwable)
+    fun showToast(message: String?)
+    fun showApiErrorToast(throwable: Throwable)
     fun showApiFatalErrorToast(fatalError: ApiFatalError)
-//    fun showNonFatalErrorToast(nonFatalError: NonFatalError)
+    fun showNonFatalErrorToast(nonFatalError: NonFatalError)
     fun showNonFatalErrorDialog(nonFatalError: NonFatalError)
 
     // ChromeCustomTab

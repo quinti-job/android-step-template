@@ -10,6 +10,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.quinti.android_step_template.R
+import com.quinti.android_step_template.kmp.domain.analytics.TrackScreenEventV2
+import com.quinti.android_step_template.kmp.domain.analytics.Tracking
 import com.quinti.android_step_template.kmp.domain.reactor.DailyRouletteReactor
 import com.quinti.android_step_template.kmp.domain.reactor.base.Reactor
 import com.quinti.android_step_template.ui.component.KyashCloseTopAppBar
@@ -60,11 +62,11 @@ private fun DailyRouletteScreen(
             loadedContent = {
                 when (it.resultSlotState) {
                     DailyRouletteReactor.State.RouletteResultSlotState.Ready -> {
-//                        TrackScreenEvent(Tracking.Screen.RewardDailyRouletteReady)
+                        TrackScreenEventV2(Tracking.Screen.RewardDailyRouletteReady)
                     }
 
                     is DailyRouletteReactor.State.RouletteResultSlotState.Start -> {
-//                        TrackScreenEvent(Tracking.Screen.RewardDailyRouletteCompletion)
+                        TrackScreenEventV2(Tracking.Screen.RewardDailyRouletteCompletion)
                     }
                 }
 

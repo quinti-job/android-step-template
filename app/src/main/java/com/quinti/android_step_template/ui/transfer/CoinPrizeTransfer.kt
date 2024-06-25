@@ -2,6 +2,7 @@ package com.quinti.android_step_template.ui.transfer
 
 import android.os.Parcelable
 import co.kyash.mobile.model.reward.Prize
+import com.quinti.android_step_template.kmp.data.entity.Prize
 import korlibs.time.DateTimeTz
 import kotlinx.parcelize.Parcelize
 

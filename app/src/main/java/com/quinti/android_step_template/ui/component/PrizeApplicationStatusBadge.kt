@@ -12,13 +12,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
-import co.kyash.kig.compose.dimen16dp
-import co.kyash.kig.compose.dimen4dp
-import co.kyash.kig.compose.dimen8dp
-import co.kyash.kig.compose.theme.SocialNetworkTheme
-import co.kyash.mobile.reward.PrizeApplicableStatus
-import co.kyash.reward.R
 import com.quinti.android_step_template.R
+import com.quinti.android_step_template.kmp.data.entity.PrizeApplicableStatus
 import com.quinti.android_step_template.ui.theme.SocialNetworkTheme
 import korlibs.time.DateTimeTz
 
@@ -57,11 +52,11 @@ fun PrizeApplicationStatusBadge(
 private fun StatusBadgeClosed() {
     Box(
         modifier = Modifier
-            .clip(RoundedCornerShape(dimen4dp))
+            .clip(RoundedCornerShape(SocialNetworkTheme.spacing.xxs))
             .background(color = closedBackgroundColor)
             .padding(
-                vertical = dimen4dp,
-                horizontal = dimen8dp,
+                vertical = SocialNetworkTheme.spacing.xxs,
+                horizontal = SocialNetworkTheme.spacing.xs,
             ),
     ) {
         Text(
@@ -76,11 +71,11 @@ private fun StatusBadgeClosed() {
 private fun StatusBadgeApplied() {
     Box(
         modifier = Modifier
-            .clip(RoundedCornerShape(dimen4dp))
+            .clip(RoundedCornerShape(SocialNetworkTheme.spacing.xxs))
             .background(color = appliedBackgroundColor)
             .padding(
-                vertical = dimen4dp,
-                horizontal = dimen8dp,
+                vertical = SocialNetworkTheme.spacing.xxs,
+                horizontal = SocialNetworkTheme.spacing.xs,
             ),
     ) {
         Text(
@@ -97,10 +92,10 @@ private fun StatusBadgeRemainingAmount(
 ) {
     Box(
         modifier = Modifier
-            .clip(RoundedCornerShape(dimen4dp))
+            .clip(RoundedCornerShape(SocialNetworkTheme.spacing.xxs))
             .padding(
-                vertical = dimen4dp,
-                horizontal = dimen8dp,
+                vertical = SocialNetworkTheme.spacing.xxs,
+                horizontal = SocialNetworkTheme.spacing.xs,
             ),
     ) {
         Text(
@@ -118,11 +113,11 @@ private fun StatusBadgeRemainingAmount(
 private fun StatusBadgeApplicable() {
     Box(
         modifier = Modifier
-            .clip(RoundedCornerShape(dimen4dp))
+            .clip(RoundedCornerShape(SocialNetworkTheme.spacing.xxs))
             .background(color = availableBackgroundColor)
             .padding(
-                vertical = dimen4dp,
-                horizontal = dimen8dp,
+                vertical = SocialNetworkTheme.spacing.xxs,
+                horizontal = SocialNetworkTheme.spacing.xs,
             ),
     ) {
         Text(
@@ -137,11 +132,11 @@ private fun StatusBadgeApplicable() {
 private fun StatusBadgeComingSoon() {
     Box(
         modifier = Modifier
-            .clip(RoundedCornerShape(dimen4dp))
+            .clip(RoundedCornerShape(SocialNetworkTheme.spacing.xxs))
             .background(color = comingSoonBackgroundColor)
             .padding(
-                vertical = dimen4dp,
-                horizontal = dimen8dp,
+                vertical = SocialNetworkTheme.spacing.xxs,
+                horizontal = SocialNetworkTheme.spacing.xs,
             ),
     ) {
         Text(
@@ -159,7 +154,7 @@ private fun PrizeApplicationStatusBadgePreview_shortage() {
         Surface {
             PrizeApplicationStatusBadge(
                 PrizeApplicableStatus.Shortage(200, 0.5f),
-                modifier = Modifier.padding(dimen16dp),
+                modifier = Modifier.padding(SocialNetworkTheme.spacing.m),
             )
         }
     }
@@ -172,7 +167,7 @@ private fun PrizeApplicationStatusBadgePreview_applicable() {
         Surface {
             PrizeApplicationStatusBadge(
                 PrizeApplicableStatus.Applicable,
-                modifier = Modifier.padding(dimen16dp),
+                modifier = Modifier.padding(SocialNetworkTheme.spacing.m),
             )
         }
     }
@@ -185,7 +180,7 @@ private fun PrizeApplicationStatusBadgePreview_comingSoon() {
         Surface {
             PrizeApplicationStatusBadge(
                 PrizeApplicableStatus.NotYetApplicable,
-                modifier = Modifier.padding(dimen16dp),
+                modifier = Modifier.padding(SocialNetworkTheme.spacing.m),
             )
         }
     }
@@ -198,7 +193,7 @@ private fun PrizeApplicationStatusBadgePreview_applied() {
         Surface {
             PrizeApplicationStatusBadge(
                 PrizeApplicableStatus.Applied,
-                modifier = Modifier.padding(dimen16dp),
+                modifier = Modifier.padding(SocialNetworkTheme.spacing.m),
             )
         }
     }
@@ -211,7 +206,7 @@ private fun PrizeApplicationStatusBadgePreview_closed() {
         Surface {
             PrizeApplicationStatusBadge(
                 PrizeApplicableStatus.Ended(PrizeApplicableStatus.Ended.Reason.LotteryPeriodEnded),
-                modifier = Modifier.padding(dimen16dp),
+                modifier = Modifier.padding(SocialNetworkTheme.spacing.m),
             )
         }
     }

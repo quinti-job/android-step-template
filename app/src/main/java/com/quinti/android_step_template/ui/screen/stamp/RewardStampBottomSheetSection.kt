@@ -30,11 +30,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.quinti.android_step_template.R
-import com.quinti.android_step_template.kmp.data.api.entity.Stamp
-import com.quinti.android_step_template.kmp.data.api.entity.StampCard
-import com.quinti.android_step_template.kmp.data.api.entity.StampCardUiState
-import com.quinti.android_step_template.kmp.data.api.entity.StampUiState
-import com.quinti.android_step_template.kmp.data.api.entity.needRouletteAnimation
+import com.quinti.android_step_template.kmp.data.entity.Stamp
+import com.quinti.android_step_template.kmp.data.entity.StampCard
+import com.quinti.android_step_template.kmp.data.entity.StampCardUiState
+import com.quinti.android_step_template.kmp.data.entity.StampUiState
+import com.quinti.android_step_template.kmp.data.entity.needRouletteAnimation
 import com.quinti.android_step_template.ui.component.HalfModalBottomSheetHandle
 import com.quinti.android_step_template.ui.component.KyashOutlinedButton
 import com.quinti.android_step_template.ui.theme.SocialNetworkTheme

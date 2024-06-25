@@ -19,6 +19,7 @@
     <string name="login_failed">"Login failed"</string>
 
     <string name="close">閉じる</string>
+    <string name="ok">OK</string>
 
 
     <string name="reward_title">リワード</string>
@@ -152,8 +153,8 @@
     <string name="reward_prize_application_history_tab_weekly">ウィークリー</string>
     <string name="reward_prize_application_history_tab_daily">デイリー</string>
     <string name="reward_prize_application_history_empty">応募履歴がありません</string>
-    <string name="reward_button_all">すべて</string>
-    <string name="reward_button_tousen">当選</string>
+    <string name="reward_prize_application_history_button_all">すべて</string>
+    <string name="reward_prize_application_history_button_won">当選</string>
 
     <string name="reward_applied_prize_list_announce_expire_remaining_days">結果発表あと%d日</string>
     <string name="reward_applied_prize_list_announce_expire_remaining_current">本日結果発表</string>

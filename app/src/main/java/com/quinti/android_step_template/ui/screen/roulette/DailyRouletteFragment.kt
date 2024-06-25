@@ -8,11 +8,12 @@ import androidx.activity.addCallback
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.platform.ComposeView
 import androidx.compose.ui.platform.ViewCompositionStrategy
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.quinti.android_step_template.kmp.domain.util.collectWithLifecycle
+import com.quinti.android_step_template.kmp.domain.analytics.EventTracker
+import com.quinti.android_step_template.kmp.domain.analytics.LocalEventTracker
+import com.quinti.android_step_template.util.collectWithLifecycle
 import com.quinti.android_step_template.kmp.domain.reactor.DailyRouletteReactor.Event
 import com.quinti.android_step_template.ui.navigator.FragmentRouter
 import com.quinti.android_step_template.ui.navigator.Router
@@ -28,8 +29,8 @@ class DailyRouletteFragment : Fragment() {
     @FragmentRouter
     lateinit var router: Router
 
-//    @Inject
-//    lateinit var eventTracker: EventTracker
+    @Inject
+    lateinit var eventTracker: EventTracker
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,7 +48,7 @@ class DailyRouletteFragment : Fragment() {
             setViewCompositionStrategy(ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed)
             setContent {
                 CompositionLocalProvider(
-//                    LocalEventTracker provides eventTracker,
+                    LocalEventTracker provides eventTracker,
                 ) {
                     SocialNetworkTheme {
                         DailyRouletteScreen(viewModel)

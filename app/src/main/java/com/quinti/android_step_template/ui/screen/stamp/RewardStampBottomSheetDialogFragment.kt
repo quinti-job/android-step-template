@@ -11,6 +11,9 @@ import androidx.compose.ui.platform.ViewCompositionStrategy
 import androidx.fragment.app.setFragmentResult
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.quinti.android_step_template.kmp.domain.analytics.EventTracker
+import com.quinti.android_step_template.kmp.domain.analytics.LocalEventTracker
+import com.quinti.android_step_template.kmp.domain.analytics.Tracking
 import com.quinti.android_step_template.ui.navigator.FragmentRouter
 import com.quinti.android_step_template.ui.navigator.Router
 import com.quinti.android_step_template.ui.theme.SocialNetworkTheme
@@ -24,8 +27,8 @@ class RewardStampBottomSheetDialogFragment : BottomSheetDialogFragment() {
 
     private val stampCard: RewardStampBottomSheetDialogFragmentArgs by navArgs()
 
-//    @Inject
-//    lateinit var eventTracker: EventTracker
+    @Inject
+    lateinit var eventTracker: EventTracker
 
     @Inject
     @FragmentRouter
@@ -41,14 +44,14 @@ class RewardStampBottomSheetDialogFragment : BottomSheetDialogFragment() {
             setViewCompositionStrategy(ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed)
             setContent {
                 CompositionLocalProvider(
-//                    LocalEventTracker provides eventTracker,
+                    LocalEventTracker provides eventTracker,
                 ) {
                     SocialNetworkTheme {
                         RewardStampBottomSheetDialogScreen(
                             stampCardUiState = stampCardUiState,
                             onClose = { dismiss() },
                             onHelpClick = {
-//                                eventTracker.trackEvent(Tracking.Action.RewardStamp.ClickedHelp)
+                                eventTracker.trackEvent(Tracking.Action.RewardStamp.ClickedHelp)
                                 router.navigateToChromeCustomTab(
                                     KyashSupportUrls.ABOUT_REWARD_STAMP_CARD_URL,
                                     session = null,

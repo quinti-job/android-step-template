@@ -4,6 +4,8 @@ import com.quinti.android_step_template.kmp.data.api.exception.ApiFatalError
 import com.quinti.android_step_template.kmp.data.api.exception.ApiFatalErrorException
 import com.quinti.android_step_template.kmp.data.api.exception.NonFatalError
 import com.quinti.android_step_template.kmp.data.api.exception.asNonFatalError
+import com.quinti.android_step_template.kmp.data.entity.DailyRouletteOptions
+import com.quinti.android_step_template.kmp.data.entity.DailyRouletteStatus
 import com.quinti.android_step_template.kmp.domain.reactor.DailyRouletteReactor.State
 import com.quinti.android_step_template.kmp.domain.reactor.DailyRouletteReactor.Action
 import com.quinti.android_step_template.kmp.domain.reactor.DailyRouletteReactor.Mutation
@@ -20,8 +22,6 @@ import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.internal.NopCollector.emit
-import okhttp3.internal.notify
 
 class DailyRouletteReactor(
     mainDispatcher: CoroutineDispatcher,

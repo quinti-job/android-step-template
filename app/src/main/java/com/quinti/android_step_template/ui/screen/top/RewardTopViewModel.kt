@@ -6,7 +6,9 @@ import androidx.lifecycle.viewModelScope
 import com.quinti.android_step_template.kmp.domain.reactor.RewardTopReactor
 import com.quinti.android_step_template.kmp.domain.reactor.base.Reactor
 import com.quinti.android_step_template.kmp.domain.reactor.base.ReactorViewModel
-import com.quinti.android_step_template.kmp.domain.reactor.di.ReactorDiContainer
+import com.quinti.android_step_template.kmp.di.ReactorDiContainer
+import com.quinti.android_step_template.kmp.domain.analytics.EventTracker
+import com.quinti.android_step_template.kmp.domain.analytics.Tracking
 import com.quinti.android_step_template.ui.config.RewardConfig
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
@@ -19,7 +21,7 @@ import kotlinx.coroutines.launch
 @HiltViewModel
 class RewardTopViewModel @Inject constructor(
     reactorDiContainer: ReactorDiContainer,
-//    private val tracker: EventTracker,
+    private val tracker: EventTracker,
     rewardConfig: RewardConfig,
 ) : ReactorViewModel<RewardTopReactor>(
     reactorDiContainer.createRewardTopReactor(
@@ -52,7 +54,7 @@ class RewardTopViewModel @Inject constructor(
     }
 
     fun onClickDailyRoulette() {
-//        tracker.trackEvent(Tracking.Action.RewardTop.ClickRoulette)
+        tracker.trackEvent(Tracking.Action.RewardTop.ClickRoulette)
         reactor.execute(RewardTopReactor.Action.TapRoulette)
     }
 
@@ -61,12 +63,12 @@ class RewardTopViewModel @Inject constructor(
     }
 
     fun onClickPrize(prize: RewardTopReactor.State.PrizeUiState) {
-//        tracker.trackEvent(
-//            Tracking.Action.RewardTop.ClickChallenge(
-//                prizeId = prize.prizeId,
-//                prizeType = prize.prizeType.name,
-//            ),
-//        )
+        tracker.trackEvent(
+            Tracking.Action.RewardTop.ClickChallenge(
+                prizeId = prize.prizeId,
+                prizeType = prize.prizeType.name,
+            ),
+        )
         reactor.execute(RewardTopReactor.Action.TapPrize(prize))
     }
 
@@ -83,12 +85,12 @@ class RewardTopViewModel @Inject constructor(
     }
 
     fun onAboutRewardClick() {
-//        tracker.trackEvent(Tracking.Action.RewardTop.ClickAboutReward)
+        tracker.trackEvent(Tracking.Action.RewardTop.ClickAboutReward)
         reactor.execute(RewardTopReactor.Action.TapAboutReward)
     }
 
     fun onClickKyashCoin() {
-//        tracker.trackEvent(Tracking.Action.RewardTop.ClickCoinDetail)
+        tracker.trackEvent(Tracking.Action.RewardTop.ClickCoinDetail)
         reactor.execute(RewardTopReactor.Action.TapKyashCoinDetail)
     }
 
@@ -118,8 +120,7 @@ class RewardTopViewModel @Inject constructor(
     }
 
     fun onTapOfferWallBanner() {
-//        tracker.trackEvent(Tracking.Action.RewardTop.ClickOfferWall)
+        tracker.trackEvent(Tracking.Action.RewardTop.ClickOfferWall)
         reactor.execute(RewardTopReactor.Action.TapOfferWall)
     }
 }
-

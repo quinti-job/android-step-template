@@ -17,6 +17,8 @@ import androidx.compose.ui.platform.ViewCompositionStrategy
 import androidx.compose.ui.unit.dp
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.setFragmentResult
+import com.quinti.android_step_template.kmp.domain.analytics.EventTracker
+import com.quinti.android_step_template.kmp.domain.analytics.LocalEventTracker
 import com.quinti.android_step_template.ui.theme.SocialNetworkTheme
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -24,8 +26,8 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class SpotlightFragment : DialogFragment() {
 
-//    @Inject
-//    lateinit var eventTracker: EventTracker
+    @Inject
+    lateinit var eventTracker: EventTracker
 
     private val RouletteRadius = 19.dp
     private val WelcomeChallengeRadius = 0.dp
@@ -64,7 +66,7 @@ class SpotlightFragment : DialogFragment() {
             setViewCompositionStrategy(ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed)
             setContent {
                 CompositionLocalProvider(
-//                    LocalEventTracker provides eventTracker,
+                    LocalEventTracker provides eventTracker,
                 ) {
                     SocialNetworkTheme {
                         SpotlightScreen(

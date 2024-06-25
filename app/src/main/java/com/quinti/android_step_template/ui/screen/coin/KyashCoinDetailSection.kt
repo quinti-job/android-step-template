@@ -28,7 +28,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.quinti.android_step_template.R
-import com.quinti.android_step_template.kmp.data.api.entity.KyashCoinHistory
+import com.quinti.android_step_template.kmp.data.entity.KyashCoinHistory
 import com.quinti.android_step_template.ui.component.KyashCoinIcon
 import com.quinti.android_step_template.ui.component.KyashSwipeRefresh
 import com.quinti.android_step_template.ui.component.OnScrollEnd

@@ -14,24 +14,10 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.withResumed
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
-import co.kyash.KyashSupportUrls
-import co.kyash.analytics.LocalEventTracker
-import co.kyash.kig.compose.theme.SocialNetworkTheme
-import co.kyash.mobile.core.featureflag.ReleaseFlag
-import co.kyash.mobile.reward.top.RewardTopReactor
-import co.kyash.model.analytics.EventTracker
-import co.kyash.reward.R
-import co.kyash.ui.core.compose.LocalOfferWallEnabled
-import co.kyash.ui.navigator.Router
-import co.kyash.ui.reward.spotlight.SpotlightFragment
-import co.kyash.ui.reward.top.onboarding.RewardOnboardingFragment
-import co.kyash.ui.reward.top.stamp.RewardStampBottomSheetDialogFragment
-import co.kyash.ui.reward.transfer.CoinPrizeTransfer
-import co.kyash.ui.reward.transfer.StampCardUiStateTransfer
-import co.kyash.ui.util.collectWithLifecycle
 import com.quinti.android_step_template.R
+import com.quinti.android_step_template.kmp.domain.analytics.EventTracker
+import com.quinti.android_step_template.kmp.domain.analytics.LocalEventTracker
 import com.quinti.android_step_template.kmp.domain.reactor.RewardTopReactor
-import com.quinti.android_step_template.kmp.domain.util.collectWithLifecycle
 import com.quinti.android_step_template.ui.navigator.Router
 import com.quinti.android_step_template.ui.screen.spotlight.SpotlightFragment
 import com.quinti.android_step_template.ui.screen.stamp.RewardStampBottomSheetDialogFragment
@@ -39,6 +25,7 @@ import com.quinti.android_step_template.ui.theme.SocialNetworkTheme
 import com.quinti.android_step_template.ui.transfer.CoinPrizeTransfer
 import com.quinti.android_step_template.ui.transfer.StampCardUiStateTransfer
 import com.quinti.android_step_template.util.KyashSupportUrls
+import com.quinti.android_step_template.util.collectWithLifecycle
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 import kotlinx.coroutines.launch
@@ -47,9 +34,6 @@ import kotlinx.coroutines.launch
 class RewardTopFragment : Fragment() {
 
     private val viewModel: RewardTopViewModel by viewModels()
-
-    @Inject
-    lateinit var releaseFlag: ReleaseFlag
 
     @Inject
     lateinit var router: Router
@@ -62,9 +46,9 @@ class RewardTopFragment : Fragment() {
         setFragmentResultListener(RewardStampBottomSheetDialogFragment.REQUEST_KEY) { _, _ ->
             viewModel.onResume()
         }
-        setFragmentResultListener(RewardOnboardingFragment.REQUEST_KEY) { _, _ ->
-            viewModel.onResume()
-        }
+//        setFragmentResultListener(RewardOnboardingFragment.REQUEST_KEY) { _, _ ->
+//            viewModel.onResume()
+//        }
         setFragmentResultListener(SpotlightFragment.REQUEST_KEY_TAP_CONTENT) { _, bundle ->
             val type = bundle.getString(SpotlightFragment.KEY_TYPE)?.let {
                 SpotlightFragment.Type.valueOf(it)
@@ -89,7 +73,6 @@ class RewardTopFragment : Fragment() {
             setContent {
                 CompositionLocalProvider(
                     LocalEventTracker provides eventTracker,
-                    LocalOfferWallEnabled provides releaseFlag.isOfferwallEnabled,
                 ) {
                     SocialNetworkTheme {
                         RewardTopScreen(viewModel)
@@ -101,7 +84,7 @@ class RewardTopFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.reactor.event.collectWithLifecycle(this, ::handleEvent)
+        viewModel.reactor.event.collectWithLifecycle(fragment = this, ::handleEvent)
         lifecycleScope.launch {
             withResumed {
                 viewModel.loadInitially()
@@ -144,11 +127,12 @@ class RewardTopFragment : Fragment() {
             }
 
             RewardTopReactor.Event.NavigateToDailyRoulette ->
-                findNavController().runInRewardTop {
-                    navigate(
-                        RewardTopFragmentDirections.toDailyRoulette(),
-                    )
-                }
+//                findNavController().runInRewardTop {
+//                    navigate(
+//                        RewardTopFragmentDirections.toDailyRoulette(),
+//                    )
+//                }
+                TODO()
 
             RewardTopReactor.Event.NavigateToAppliedPrizeList ->
                 findNavController().runInRewardTop {
@@ -167,11 +151,12 @@ class RewardTopFragment : Fragment() {
             )
 
             RewardTopReactor.Event.ShowRewardOnboarding ->
-                findNavController().runInRewardTop {
-                    navigate(
-                        RewardTopFragmentDirections.toRewardOnboarding(),
-                    )
-                }
+//                findNavController().runInRewardTop {
+//                    navigate(
+//                        RewardTopFragmentDirections.toRewardOnboarding(),
+//                    )
+//                }
+                TODO()
 
             RewardTopReactor.Event.NavigateToKyashCoinDetail ->
                 findNavController().runInRewardTop {
@@ -212,19 +197,19 @@ class RewardTopFragment : Fragment() {
                     .show(parentFragmentManager, "SpotlightFragmentTypeWelcomeChallenge")
             }
 
-            RewardTopReactor.Event.ShowStampCardOnboarding ->
-                findNavController().runInRewardTop {
-                    navigate(
-                        RewardTopFragmentDirections.toRewardStampOnboardingDialogFragment(),
-                    )
-                }
+            RewardTopReactor.Event.ShowStampCardOnboarding -> TODO()
+//                findNavController().runInRewardTop {
+//                    navigate(
+//                        RewardTopFragmentDirections.toRewardStampOnboardingDialogFragment(),
+//                    )
+//                }
 
-            RewardTopReactor.Event.NavigateToOfferWall ->
-                findNavController().runInRewardTop {
-                    navigate(
-                        RewardTopFragmentDirections.toOfferWallFragment(),
-                    )
-                }
+            RewardTopReactor.Event.NavigateToOfferWall -> TODO()
+//                findNavController().runInRewardTop {
+//                    navigate(
+//                        RewardTopFragmentDirections.toOfferWallFragment(),
+//                    )
+//                }
         }
     }
 }

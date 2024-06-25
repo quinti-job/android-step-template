@@ -25,6 +25,7 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraph
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI.setupWithNavController
 import androidx.navigation.ui.setupWithNavController
 import co.kyash.MainViewModel.Event
 import co.kyash.databinding.MainActivityBinding
@@ -51,11 +52,14 @@ import co.kyash.ui.util.NotificationUtility
 import co.kyash.ui.wallet.WalletFragmentFactory
 import co.kyash.ui.wallet.WalletRoute
 import com.google.android.material.transition.platform.MaterialContainerTransformSharedElementCallback
+import com.quinti.android_step_template.ui.MainViewModel
+import com.quinti.android_step_template.ui.navigator.Router
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 import javax.inject.Provider
 import kotlinx.coroutines.launch
 import me.leolin.shortcutbadger.ShortcutBadger
+import okhttp3.Route
 import timber.log.Timber
 
 @AndroidEntryPoint

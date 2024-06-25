@@ -1,6 +1,6 @@
 package com.quinti.android_step_template.kmp.domain.reactor
 
-import com.quinti.android_step_template.kmp.data.api.entity.Login
+import com.quinti.android_step_template.kmp.data.entity.Login
 import com.quinti.android_step_template.kmp.domain.reactor.base.AbstractReactor
 import com.quinti.android_step_template.kmp.domain.reactor.base.Reactor
 import com.quinti.android_step_template.kmp.domain.usecase.account.LoginUseCase

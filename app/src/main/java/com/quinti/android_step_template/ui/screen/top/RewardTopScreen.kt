@@ -10,22 +10,24 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import co.kyash.mobile.model.point.PointBalance
-import co.kyash.mobile.model.reward.DailyRouletteStatus
-import co.kyash.mobile.reward.RemainingTimeType
 import com.quinti.android_step_template.R
+import com.quinti.android_step_template.kmp.data.entity.DailyRouletteStatus
+import com.quinti.android_step_template.kmp.data.entity.RemainingTimeType
+import com.quinti.android_step_template.kmp.domain.analytics.TrackScreenEventV2
+import com.quinti.android_step_template.kmp.domain.analytics.Tracking
 import com.quinti.android_step_template.kmp.domain.reactor.RewardTopReactor
 import com.quinti.android_step_template.kmp.domain.reactor.base.Reactor
 import com.quinti.android_step_template.ui.component.KyashScaffold
 import com.quinti.android_step_template.ui.component.KyashTopAppBar
 import com.quinti.android_step_template.ui.component.LoadingAndErrorScreen
+import com.quinti.android_step_template.ui.component.PointBalance
 import com.quinti.android_step_template.ui.theme.SocialNetworkTheme
 
 @Composable
 fun RewardTopScreen(viewModel: RewardTopViewModel) {
     val loadState by viewModel.reactor.state.collectAsStateWithLifecycle()
 
-//    TrackScreenEvent(screen = Tracking.Screen.RewardTop, trackOnResume = true)
+    TrackScreenEventV2(screen = Tracking.Screen.RewardTop, trackOnResume = true)
     RewardTopScreen(
         loadState = loadState,
         onClickDailyRoulette = viewModel::onClickDailyRoulette,

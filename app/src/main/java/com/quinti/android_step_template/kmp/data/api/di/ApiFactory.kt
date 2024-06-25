@@ -1,7 +1,10 @@
 package com.quinti.android_step_template.kmp.data.api.di
 
+import com.quinti.android_step_template.kmp.data.api.KyashCoinApi
+import com.quinti.android_step_template.kmp.data.api.KyashCoinApiImpl
 import com.quinti.android_step_template.kmp.data.api.LoginApi
 import com.quinti.android_step_template.kmp.data.api.LoginApiImpl
+import com.quinti.android_step_template.kmp.data.api.PointApi
 
 
 interface ApiFactory {
@@ -9,7 +12,7 @@ interface ApiFactory {
 //    fun createBankRegistrationApi(): BankRegistrationApi
 //    fun createCouponApi(): CouponApi
 //    fun createDepositApi(): DepositApi
-//    fun createKyashCoinApi(): KyashCoinApi
+    fun createKyashCoinApi(): KyashCoinApi
 //    fun createOfferWallApi(): OfferWallApi
 //    fun createLawsonBankApi(): LawsonBankApi
 //    fun createMauricioApi(): MauricioApi
@@ -18,7 +21,7 @@ interface ApiFactory {
 //    fun createNotificationBannerApi(): NotificationBannerApi
 //    fun createPayrollApi(): PayrollApi
 //    fun createPersonalInformationApi(): PersonalInformationApi
-//    fun createPointApi(): PointApi
+    fun createPointApi(): PointApi
 //    fun createPostalApi(): PostalApi
 //    fun createPromotionApi(): PromotionApi
 //    fun createSecurityApi(): SecurityApi
@@ -92,15 +95,15 @@ internal class ApiFactoryImpl(
 //            session = kyashApiFactory.session,
 //        )
 //    }
-//
-//    override fun createKyashCoinApi(): KyashCoinApi {
-//        return KyashCoinApiImpl(
-//            httpClient = kyashApiFactory.httpClient,
-//            endpoint = kyashApiFactory.endpoint,
-//            session = kyashApiFactory.session,
-//        )
-//    }
-//
+
+    override fun createKyashCoinApi(): KyashCoinApi {
+        return KyashCoinApiImpl(
+            httpClient = kyashApiFactory.httpClient,
+            endpoint = kyashApiFactory.endpoint,
+            session = kyashApiFactory.session,
+        )
+    }
+
 //    override fun createOfferWallApi(): OfferWallApi {
 //        return OfferWallApi(
 //            httpClient = kyashApiFactory.httpClient,
@@ -156,15 +159,15 @@ internal class ApiFactoryImpl(
 //            session = kyashApiFactory.session,
 //        )
 //    }
-//
-//    override fun createPointApi(): PointApi {
-//        return PointApi(
-//            httpClient = kyashApiFactory.httpClient,
-//            endpoint = kyashApiFactory.endpoint,
-//            session = kyashApiFactory.session,
-//        )
-//    }
-//
+
+    override fun createPointApi(): PointApi {
+        return PointApi(
+            httpClient = kyashApiFactory.httpClient,
+            endpoint = kyashApiFactory.endpoint,
+            session = kyashApiFactory.session,
+        )
+    }
+
 //    override fun createPostalApi(): PostalApi {
 //        return PostalApi(
 //            httpClient = kyashApiFactory.httpClient,

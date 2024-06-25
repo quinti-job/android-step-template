@@ -12,10 +12,8 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import co.kyash.kig.compose.theme.KyashTheme
-import co.kyash.mobile.model.point.PointBalance
-import co.kyash.reward.R
 import com.quinti.android_step_template.R
+import com.quinti.android_step_template.ui.theme.SocialNetworkTheme
 
 /**
  * Kyashコインの表示
@@ -42,12 +40,12 @@ fun KyashPointWithIcon(
                     id = R.string.reward_kyach_coin_balance,
                     amount.availableAmount,
                 ),
-                style = KyashTheme.typography.bodyBold,
+                style = SocialNetworkTheme.typography.bodyBold,
             )
         } else {
             Text(
                 text = "-",
-                style = KyashTheme.typography.bodyBold,
+                style = SocialNetworkTheme.typography.bodyBold,
             )
         }
     }
@@ -56,7 +54,7 @@ fun KyashPointWithIcon(
 @Preview
 @Composable
 fun KyashPointWithIconPreview() {
-    KyashTheme {
+    SocialNetworkTheme {
         Surface {
             KyashPointWithIcon(
                 amount = PointBalance(

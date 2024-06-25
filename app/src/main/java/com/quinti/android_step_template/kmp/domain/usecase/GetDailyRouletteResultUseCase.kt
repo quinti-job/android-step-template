@@ -1,6 +1,6 @@
 package com.quinti.android_step_template.kmp.domain.usecase
 
-import co.kyash.mobile.repository.KyashCoinRepository
+import com.quinti.android_step_template.kmp.data.repository.KyashCoinRepository
 
 /**
  * デイリールーレットの結果を取得する

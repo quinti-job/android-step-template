@@ -12,9 +12,8 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import co.kyash.kig.compose.theme.KyashTheme
-import co.kyash.reward.R
 import com.quinti.android_step_template.R
+import com.quinti.android_step_template.ui.theme.SocialNetworkTheme
 
 /**
  * Kyashコインの表示
@@ -41,12 +40,12 @@ fun KyashCoinWithIcon(
                     id = R.string.reward_kyach_coin_balance,
                     amount,
                 ),
-                style = KyashTheme.typography.bodyBold,
+                style = SocialNetworkTheme.typography.bodyBold,
             )
         } else {
             Text(
                 text = "-",
-                style = KyashTheme.typography.bodyBold,
+                style = SocialNetworkTheme.typography.bodyBold,
             )
         }
     }
@@ -57,7 +56,7 @@ fun DisabledKyashCoinWithIcon(
     amount: Long?,
     modifier: Modifier = Modifier,
 ) {
-    val foregroundColor = KyashTheme.colors.textColorExtraLight
+    val foregroundColor = SocialNetworkTheme.colors.textColorExtraLight
     val fontScale = LocalDensity.current.fontScale
     Row(
         modifier = modifier,
@@ -73,13 +72,13 @@ fun DisabledKyashCoinWithIcon(
                     id = R.string.reward_kyach_coin_balance,
                     amount,
                 ),
-                style = KyashTheme.typography.bodyBold,
+                style = SocialNetworkTheme.typography.bodyBold,
                 color = foregroundColor,
             )
         } else {
             Text(
                 text = "-",
-                style = KyashTheme.typography.bodyBold,
+                style = SocialNetworkTheme.typography.bodyBold,
                 color = foregroundColor,
             )
         }
@@ -89,7 +88,7 @@ fun DisabledKyashCoinWithIcon(
 @Preview
 @Composable
 private fun KyashCoinWithIconPreview() {
-    KyashTheme {
+    SocialNetworkTheme {
         Surface {
             KyashCoinWithIcon(
                 amount = 6000,
@@ -102,7 +101,7 @@ private fun KyashCoinWithIconPreview() {
 @Preview
 @Composable
 private fun KyashCoinWithIconPreview_null() {
-    KyashTheme {
+    SocialNetworkTheme {
         Surface {
             KyashCoinWithIcon(
                 amount = null,

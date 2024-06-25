@@ -1,7 +1,7 @@
 package com.quinti.android_step_template.kmp.domain.usecase
 
-import co.kyash.mobile.model.reward.KyashCoinHistoryList
-import co.kyash.mobile.repository.KyashCoinRepository
+import com.quinti.android_step_template.kmp.data.entity.KyashCoinHistoryList
+import com.quinti.android_step_template.kmp.data.repository.KyashCoinRepository
 
 interface GetKyashCoinHistoryUseCase {
     suspend operator fun invoke(

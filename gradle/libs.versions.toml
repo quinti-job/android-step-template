@@ -21,6 +21,8 @@ navigationUiKtx = "2.7.7"
 legacySupportV4 = "1.0.0"
 browser = "1.8.0"
 coreI18n = "1.0.0-alpha01"
+lottie = "6.4.1"
+firebaseComponents = "18.0.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -61,9 +63,18 @@ androidx-legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support
 androidx-browser = { group = "androidx.browser", name = "browser", version.ref = "browser" }
 androidx-core-i18n = { group = "androidx.core", name = "core-i18n", version.ref = "coreI18n" }
 
+ui-lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
+ui-lottieCompose = { module = "com.airbnb.android:lottie-compose", version.ref = "lottie" }
+firebase-components = { group = "com.google.firebase", name = "firebase-components", version.ref = "firebaseComponents" }
+ui-coil-compose = { module = "io.coil-kt:coil-compose", version = "2.6.0" }
+
+[bundles]
+#compose = ["ui-coil-compose"]
+
 [plugins]
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 dagger-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }

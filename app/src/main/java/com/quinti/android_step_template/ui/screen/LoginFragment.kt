@@ -12,7 +12,7 @@ import androidx.compose.ui.platform.ViewCompositionStrategy
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.withResumed
 import com.quinti.android_step_template.kmp.domain.reactor.LoginReactor
-import com.quinti.android_step_template.kmp.domain.util.collectWithLifecycle
+import com.quinti.android_step_template.util.collectWithLifecycle
 import com.quinti.android_step_template.ui.navigator.FragmentRouter
 import com.quinti.android_step_template.ui.navigator.Router
 import com.quinti.android_step_template.ui.theme.SocialNetworkTheme

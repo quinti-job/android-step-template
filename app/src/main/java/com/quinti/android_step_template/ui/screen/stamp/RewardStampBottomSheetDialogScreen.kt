@@ -2,9 +2,11 @@ package com.quinti.android_step_template.ui.screen.stamp
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import com.quinti.android_step_template.kmp.data.api.entity.Stamp
-import com.quinti.android_step_template.kmp.data.api.entity.StampCard
-import com.quinti.android_step_template.kmp.data.api.entity.StampCardUiState
+import com.quinti.android_step_template.kmp.data.entity.Stamp
+import com.quinti.android_step_template.kmp.data.entity.StampCard
+import com.quinti.android_step_template.kmp.data.entity.StampCardUiState
+import com.quinti.android_step_template.kmp.domain.analytics.TrackScreenEventV2
+import com.quinti.android_step_template.kmp.domain.analytics.Tracking
 import com.quinti.android_step_template.ui.theme.SocialNetworkTheme
 import korlibs.time.DateTimeTz
 
@@ -14,7 +16,7 @@ fun RewardStampBottomSheetDialogScreen(
     onClose: () -> Unit,
     onHelpClick: () -> Unit,
 ) {
-//    TrackScreenEvent(screen = Tracking.Screen.RewardStampCard)
+    TrackScreenEventV2(screen = Tracking.Screen.RewardStampCard)
 
     RewardStampBottomSheetSection(
         stampCardUiState = stampCardUiState,

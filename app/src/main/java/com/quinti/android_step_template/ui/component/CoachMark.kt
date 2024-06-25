@@ -25,7 +25,6 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import co.kyash.kig.compose.clickableWithoutDoubleTap
 import com.quinti.android_step_template.R
 import com.quinti.android_step_template.ui.theme.SocialNetworkTheme
 
@@ -88,7 +87,7 @@ fun CoachMark(
                             .padding(SocialNetworkTheme.spacing.xs),
 
                         imageVector = Icons.Filled.Close,
-                        contentDescription = stringResource(id = co.kyash.core.R.string.close),
+                        contentDescription = stringResource(id = R.string.close),
                     )
                 }
             }

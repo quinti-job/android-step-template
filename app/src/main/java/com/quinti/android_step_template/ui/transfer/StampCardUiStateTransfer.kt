@@ -1,10 +1,9 @@
 package com.quinti.android_step_template.ui.transfer
 
 import android.os.Parcelable
-import co.kyash.mobile.model.reward.Stamp
-import co.kyash.mobile.model.reward.StampCard
-import co.kyash.mobile.reward.top.StampCardUiState
-import com.quinti.android_step_template.kmp.data.api.entity.Stamp
+import com.quinti.android_step_template.kmp.data.entity.Stamp
+import com.quinti.android_step_template.kmp.data.entity.StampCard
+import com.quinti.android_step_template.kmp.data.entity.StampCardUiState
 import korlibs.time.DateTimeTz
 import kotlinx.parcelize.Parcelize
 

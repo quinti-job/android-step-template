@@ -26,7 +26,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.quinti.android_step_template.R
-import com.quinti.android_step_template.kmp.data.api.entity.Stamp
+import com.quinti.android_step_template.kmp.data.entity.Stamp
 import com.quinti.android_step_template.ui.component.DisabledKyashCoinIcon
 import com.quinti.android_step_template.ui.component.DisabledPointIcon
 import com.quinti.android_step_template.ui.component.KyashCoinIcon

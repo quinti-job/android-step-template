@@ -9,6 +9,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.quinti.android_step_template.kmp.domain.analytics.TrackScreenEventV2
+import com.quinti.android_step_template.kmp.domain.analytics.Tracking
 import com.quinti.android_step_template.ui.component.KyashCloseTopAppBar
 import com.quinti.android_step_template.ui.component.KyashScaffold
 import com.quinti.android_step_template.ui.theme.SocialNetworkTheme
@@ -20,7 +22,7 @@ fun ServiceProviderAgreementScreen(
     onAgree: () -> Unit,
     onTapAgreementCancel: () -> Unit,
 ) {
-//    TrackScreenEventV2(screen = Tracking.Screen.OffereWallAgreement)
+    TrackScreenEventV2(screen = Tracking.Screen.OfferWallAgreement)
     KyashScaffold(
         topBar = {
             KyashCloseTopAppBar(
