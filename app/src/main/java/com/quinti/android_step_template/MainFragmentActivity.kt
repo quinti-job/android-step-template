@@ -52,8 +52,10 @@ import co.kyash.ui.util.NotificationUtility
 import co.kyash.ui.wallet.WalletFragmentFactory
 import co.kyash.ui.wallet.WalletRoute
 import com.google.android.material.transition.platform.MaterialContainerTransformSharedElementCallback
+import com.quinti.android_step_template.di.produceViewModels
 import com.quinti.android_step_template.ui.MainViewModel
 import com.quinti.android_step_template.ui.navigator.Router
+import com.quinti.android_step_template.util.NotificationUtility
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 import javax.inject.Provider
