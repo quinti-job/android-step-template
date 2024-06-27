@@ -88,22 +88,7 @@ class MainFragmentActivity : FragmentActivity() {
     }
 
     @Inject
-    lateinit var walletFragmentFactory: WalletFragmentFactory
-
-    @Inject
-    lateinit var couponFragmentFactory: CouponFragmentFactory
-
-    @Inject
-    lateinit var accountFragmentFactory: AccountFragmentFactory
-
-    @Inject
-    lateinit var notificationSettingFragmentFactory: NotificationSettingFragmentFactory
-
-    @Inject
-    lateinit var redeemFragmentFactory: RedeemFragmentFactory
-
-    @Inject
-    lateinit var releaseFlag: ReleaseFlag
+    lateinit var topFragmentFactory: TopFragmentFactory
 
     private lateinit var binding: MainActivityBinding
 
@@ -403,7 +388,7 @@ class MainFragmentActivity : FragmentActivity() {
     companion object {
         fun createIntent(
             context: Context,
-            route: Route = Route.OpenWallet(),
+            route: TabRoute = TabRoute.OpenWallet(),
             selectedWalletId: WalletId? = null,
         ): Intent {
             val intent = Intent(context, MainActivity::class.java)
